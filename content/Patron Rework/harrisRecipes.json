@@ -1,0 +1,155 @@
+{
+"recipes": [
+  {
+    "id": "getcommissionharris",
+    "label": "Get a Commission from Dr. Harris",
+    "startdescription": "Dr Harris works on secret projects in the hours after dark. Noone is privy to what he is doing, but he asks for assistance often. Now, he seeks mine.",
+    "description": "Here's what he needs.",
+    "actionId": "talk",
+    "requirements": {"harrisready": 1, "gratitude": -1},
+    "aspects": {"commissiongiven": 1},
+    "warmup": 10,
+    "deckeffects": {"harriscommissions": 1},
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionharrisedge",
+    "label": "Fulfill a Commission for Dr. Harris",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with Dr. Harris, the lawyer. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticleedge": 1, "harris": 1, "article": 1, "edge": 2},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionharrisedgeb",
+    "label": "Fulfill a Commission for Dr. Harris",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with Dr. Harris, the lawyer. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticleedgeb": 1, "harris": 1, "article": 1, "edge": 4},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionharrisedgec",
+    "label": "Fulfill a Commission for Dr. Harris",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with Dr. Harris, the lawyer. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticleedgec": 1, "harris": 1, "article": 1, "edge": 6},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+
+  {
+    "id": "fulfilcommissionharrisheart",
+    "label": "Fulfill a Commission for Dr. Harris",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with Dr. Harris, the lawyer. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticleheart": 1, "harris": 1, "article": 1, "heart": 2},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionharrisheartb",
+    "label": "Fulfill a Commission for Dr. Harris",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with Dr. Harris, the lawyer. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticleheartb": 1, "harris": 1, "article": 1, "heart": 4},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionharrisheartc",
+    "label": "Fulfill a Commission for Dr. Harris",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with Dr. Harris, the lawyer. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticleheartc": 1, "harris": 1, "article": 1, "heart": 6},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+
+  {
+    "id": "talk_harris_wantscommission",
+    "label": "A Commission?",
+    "startdescription": "Good day. Is the commission going to be long yet?",
+    "actionId": "talk",
+    "requirements": {"harris": 1},
+    "craftable": true,
+    "hintonly": true
+  },
+  {
+    "id": "get_giftharrisa",
+    "label": "Call on a small favour from Dr Harris, the laywer.",
+    "startdescription": "Trouble with the Bureau? I'll call one of my barristers.",
+    "description": "This should help.",
+    "actionId": "talk",
+    "requirements": {"gratitude": -2, "harrisready": 1},
+    "effects": {"favour": 1},
+    "warmup": 30,
+    "craftable": true
+  },
+  {
+    "id": "get_giftharrisb",
+    "label": "Call on a large favour from Dr. Harris, the lawyer.",
+    "startdescription": "Perhaps we can do something about your reputation.",
+    "description": "My employees can take care of it.",
+    "actionId": "talk",
+    "requirements": {"gratitude": -3, "harrisready": 1},
+    "effects": {"favourb": 1},
+    "warmup": 30,
+    "craftable": true
+  },
+  {
+    "id": "get_giftharrisc",
+    "label": "Call on a substantial favour from the kindly Professor.",
+    "startdescription": "I may be able to secure the personal documents your... Foes collected about you.",
+    "description": "The deed is done. Just say the word.",
+    "actionId": "talk",
+    "requirements": {"gratitude": 3, "harrisready": 1},
+    "effects": {"favourc": 1},
+    "warmup": 30,
+    "craftable": true
+  },
+  {
+    "id": "harrisdestroyreputation",
+    "label": "Use a lawsuit to repair my reputation.",
+    "startdescription": "Dr. Harris' associate has issued several cease and desist notices on publications printing stories about me.",
+    "description": "My name should be somewhat clearer now.",
+    "actionId": "work",
+    "requirements": {"notoriety": 1, "favourb": 1},
+    "effects": {"notoriety": -1, "favourb": -1, "contentment": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "harrisdestroyevidence",
+    "label": "Use a lawsuit to destroy evidence.",
+    "startdescription": "Dr. Harris' associate has written up a formal request for handing over documents relating to my activities.",
+    "description": "The documents were begrudgingly surrendered to me. I burned them at the first opportunity.",
+    "actionId": "work",
+    "requirements": {"evidencelevel": 1, "favourc": 1},
+    "effects": {"evidencelevel": -1, "favourc": -1, "contentment": 1},
+    "warmup": 10,
+    "craftable": true
+  }
+
+]
+}

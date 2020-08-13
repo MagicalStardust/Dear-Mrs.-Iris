@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqconstance",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"constance_a",
+    "icon":"constance",
+    "label":"Constance, an acquaintance",
+    "description": "Constance asks me over for tea every now and then. I regret it when I must refuse her. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"follower_lustsensation":1, "acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "constance_b"},
+    "uniquenessgroup": "uqconstance"
+  },
+  {
+    "id":"constance_b",
+    "icon":"constance",
+    "label":"Constance, a believer",
+    "description": "Constance's hungers have sharpened terribly, but her smiles nourish the heart all the more for it.",
+    "aspects": { "follower_lustsensation":1, "follower":1, "mortal":1, "grail":2},
+    "xtriggers": {"capturefollower": "constance_p", "rebellion": "constance_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "constance_c"},
+    "uniquenessgroup": "uqconstance"
+  },
+  {
+    "id":"constance_c",
+    "icon":"constance",
+    "label":"Constance, a disciple",
+    "description": "In the right light, the mark on her mouth looks wet. At the right times, it is.",
+    "aspects": {"potential": 1, "follower_lustsensation":1, "disciple": 1, "follower":1, "mortal":1, "grail":5},
+    "xtriggers": {"capturefollower": "constance_p", "rebellion": "constance_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_grail": "constance_d"},
+    "uniquenessgroup": "uqconstance"
+  },
+  {
+    "id":"constance_d",
+    "icon":"constance",
+    "label":"Constance, a Cyprian",
+    "description": "A dinner at her house leaves one sated for days. Constance takes her own meals in private, salted with tears.",
+    "aspects": {"exalted": 1, "follower_lustsensation":1, "disciple": 1, "follower":1, "mortal":1, "grail":10},
+    "xtriggers": {"capturefollower": "constance_p", "rebellion": "constance_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqconstance"
+  },
+  {
+    "id":"constance_r",
+    "icon":"constance",
+    "label":"Constance, a Troublemaker",
+    "description": "Constance left in the early hours of the morning. I still catch a whiff of cardamom and copper around the parlour.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "constance_b", "rival_promotion": "constance_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqconstance"
+  },
+  {
+    "id":"constance_r_c",
+    "icon":"constance",
+    "label":"Constance, a Rival",
+    "description": "Constance's hungers grow deep, yet still her soul is untouched.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "constance_c", "rival_promotion": "constance_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqconstance"
+  },
+  {
+    "id":"constance_r_d",
+    "icon":"constance",
+    "label":"Constance, a Long in the Making",
+    "description": "'I told myself what we were doing was for the greater good. When you are laid out before me, I'll know it truly will have been.'",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "constance_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqconstance"
+  },
+  {
+    "id":"constance_p",
+    "icon":"constance",
+    "label":"Constance, a Prisoner",
+    "description": "Constance weeps often, but the state of her nails and fingertips tells the true measure of her grief.",
+    "aspects": {"prisoner": 1, "grail": 5, "heart": 3, "lantern": 3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqconstance"
+  }
+]
+
+}

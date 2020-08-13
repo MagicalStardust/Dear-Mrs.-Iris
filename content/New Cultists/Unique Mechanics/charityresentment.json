@@ -1,0 +1,52 @@
+{
+"recipes":
+[
+  {
+    "id":"L_rebellion_activate",
+    "extends":["L_rebellion_activate"],
+    "requirements$add":{"uqcharity":-1}
+  },
+  {
+    "id":"ambition",
+    "extends":["ambition"],
+    "linked": [
+      {"id": "L_ascension_rival", "chance":100},
+      {"id": "L_independent", "chance":100},
+      {"id": "L_resentment_activate_charity", "chance":100},
+      {"id": "L_rebellion_activate", "chance":70},
+      {"id": "L_rebellion_noactivation", "chance":100},
+      {"id": "ending.minorcrownedgrowthvictory", "chance":100},
+      {"id": "ambition.apostleforge.emitfuel", "chance":100},
+      {"id": "ambition.apostlegrail.emitfuel", "chance":100},
+      {"id": "ambition.apostlelantern.emitfuel", "chance":100},
+      {"id": "ascensioncravingpower", "chance":100},
+      {"id": "ascensioncravingsensation", "chance":100},
+      {"id": "ascensioncravingenlightenment", "chance":100},
+      {"id": "ascensioncravingremembrance", "chance":100},
+      {"id": "ascensioncravingremembrancenegative", "chance":100},
+      {"id": "ascensioncravingchange_tryascendfromg", "chance":100},
+      {"id": "ascensioncravingchange_tryascendfromf", "chance":100},
+      {"id": "ascensioncravingchange_tryascendfrome", "chance":100},
+      {"id": "ascensioncravingchange_tryascendfromd", "chance":100},
+      {"id": "ascensioncravingchange_tryascendfromc", "chance":100},
+      {"id": "ascensioncravingchange_tryascendfromb", "chance":100},
+      {"id": "ascensioncravingchange_tryascendfroma", "chance":100},
+      {"id": "ascensionnotyet", "chance":100}
+    ]
+  },
+  {
+    "id":"L_resentment_activate_charity",
+    "label":"A Way To Cope",
+    "startdescription":"Charity locked herself in a spare room. 'I'll train harder. I'll prove that I am worthy.'",
+    "description":"She wouldn't stop dancing until her heels were bloody and she was on the verge of collapse. We quickly ushered her into a bed.",
+    "requirements":{"resentment":3},
+    "action":"illhealth",
+    "warmup":30,
+    "mutations":[
+      {"filter":"follower","mutate":"resentment","level":-3,"additive":true},
+      {"filter":"mortal","mutate":"follower_wound","level":1},
+      {"filter":"mortal","mutate":"follower","level":-1}
+    ]
+  }
+]
+}

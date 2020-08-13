@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqmarco",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"marco_a",
+    "icon":"marco",
+    "label":"Marco, an acquaintance",
+    "description": "A disgraced filmmaker and projectionist from the <i>Chateau Lux</i>. Something appeared in one of his films, he says - something that he didn't put there. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1, "follower_lustsensation": 1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "marco_b"},
+    "uniquenessgroup": "uqmarco"
+  },
+  {
+    "id":"marco_b",
+    "icon":"marco",
+    "label":"Marco, a believer",
+    "description": "Cinema is an art that manipulates both light and shadow. Marco is turning his skill in those fields to our ends.",
+    "aspects": {"follower":1, "mortal":1, "lantern":2, "follower_lustsensation":1},
+    "xtriggers": {"capturefollower": "marco_p", "rebellion": "marco_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "marco_c"},
+    "uniquenessgroup": "uqmarco"
+  },
+  {
+    "id":"marco_c",
+    "icon":"marco",
+    "label":"Marco, a disciple",
+    "description": "Marco traps observed moments in nitrate film, the same way one would find flies trapped in amber.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "lantern":5, "follower_lustsensation":1},
+    "xtriggers": {"capturefollower": "marco_p", "rebellion": "marco_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_lantern": "marco_d"},
+    "uniquenessgroup": "uqmarco"
+  },
+  {
+    "id":"marco_d",
+    "icon":"marco",
+    "label":"Marco, a Seer",
+    "description": "The images in Marco’s films almost seem to reach out and grasp the viewer, but they never do. Not unless he gives the word.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "lantern":10, "follower_lustsensation":1},
+    "xtriggers": {"capturefollower": "marco_p", "rebellion": "marco_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmarco"
+  },
+  {
+    "id":"marco_r",
+    "icon":"marco",
+    "label":"Marco, a Troublemaker",
+    "description": "For whatever reason, the lenses of Marco’s camera are trained on us, now.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "marco_b", "rival_promotion": "marco_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmarco"
+  },
+  {
+    "id":"marco_r_c",
+    "icon":"marco",
+    "label":"Marco, a Rival",
+    "description": "The director is becoming increasingly cross with our inability to pin the current scene down.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "marco_c", "rival_promotion": "marco_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmarco"
+  },
+  {
+    "id":"marco_r_d",
+    "icon":"marco",
+    "label":"Marco, a Long in the Making",
+    "description": "ilm recognizes neither time nor space, only the limits of man’s imagination. <i>Êtes-vous prêt à aider à repousser les limites?</i>",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "marco_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmarco"
+  },
+  {
+    "id":"marco_p",
+    "icon":"marco",
+    "label":"Marco, a Prisoner",
+    "description": "Marco repeatedly reminds us to keep his reels out of direct sunlight, lest they combust and the things captured within run free.",
+    "aspects": {"prisoner": 1, "lantern": 5, "grail":3, "heart":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqmarco"
+  }
+]
+
+}

@@ -1,0 +1,87 @@
+{
+
+"recipes":[
+  {
+    "id":"legacyauctioneer.followletter",
+    "label":"Follow the Directions to the Auction House",
+    "startdescription": "Across broken cobbles and under lamplit streets. The directions take me far away from the lustre of the city square, into the sorts of roads people don't go down voluntarily.",
+    "description": "The store is crammed uncomfortably next to a sweets shop and a barber. But Mr. Crowner is waiting outside, and he greets me with open arms and a slightly too firm of a hug.",
+    "actionId":"work",
+    "requirements":{"legacyauctioneerjob.letter":1},
+    "effects":{"legacyauctioneerjob.letter":-1, "legacyauctioneerjob.reopen":1, "passion":1},
+    "craftable":true,
+    "warmup":30
+  },
+  {
+    "id":"legacyauctioneer.work.reopen",
+    "label":"Help With Reopening the Auction House",
+    "startdescription":"Mr. Crowner appreciates my offer of assistance. Together, the work should go much quicker.",
+    "description":"By the time we're finished, we're both covered in sweat and wheezing. But the stock is unpacked, the hall is furnished and the auction house is ready. Mr. Crowner slaps my back and tells me to report tomorrow for my first shift at the reborn Oriflamme's - but not before putting a few crumpled up notes into my hand. As thanks for my support, he says.",
+    "actionId":"work",
+    "requirements":{"legacyauctioneerjob.reopen":1},
+    "effects":{"legacyauctioneerjob.reopen":-1, "locationauctionhouse":1, "legacyauctioneerjob":1, "funds":3},
+    "alt":[{"id":"legacyauctioneer.opentalk","chance":100,"additional":true}],
+    "craftable":true,
+    "warmup":30
+  },
+  {
+    "id":"legacyauctioneer.opentalk",
+    "label":"Three's a Crowd",
+    "startdescription":"Mr. Crowner stops me before I leave for the day. He mentions I'm not the only employee he's retained. The other should be around tomorrow.",
+    "description":"I could recognize that gait from anywhere. Vicky, a local urchin that runs packages for us. She greets me with a stuck out tongue, as usual.",
+    "actionId":"talk",
+    "effects":{"legacyauctioneerjob.assistant":1},
+    "alt":[{"id":"legacyauctioneer.openexplore","chance":100,"additional":true}],
+    "warmup":30
+  },
+  {
+    "id":"legacyauctioneer.openexplore",
+    "label":"Picking up Things Here and There",
+    "startdescription":"Vicky is gone as soon as she arrives. Has something special she wants to show us, she says.",
+    "description":"She's back by the afternoon, hauling a box of treasures. As usual, she won't tell us where it all came from. [You can send Vicky out Exploring for trinkets to auction off].",
+    "actionId":"explore",
+    "effects":{"trinketa":3},
+    "warmup":30
+  },
+  {
+    "id":"legacyauctioneer.work.first.hint",
+    "label":"Start My First Shift at the New Oriflamme's?",
+    "startdescription":"I'll need my place of work, as well as something to sell.",
+    "requirements":{"legacyauctioneerjob":1,"locationauctionhouse":-1,"auctionable":-1},
+    "extantreqs":{"desire":-1},
+    "actionId":"work",
+    "hintonly":true
+  },
+  {
+    "id":"legacyauctioneer.work.first",
+    "label":"Start My First Shift at the New Oriflamme's",
+    "startdescription":"The hall is spotless clean, and tightly packed with chairs. I take my position, and my gavel. People slowly start to file in. Its' time to begin.",
+    "description":"And Sold.",
+    "requirements":{"legacyauctioneerjob":1,"locationauctionhouse":1,"auctionable":1},
+    "effects":{"auctionable":-1},
+    "extantreqs":{"desire":-1},
+    "actionId":"work",
+    "warmup":30,
+    "craftable":true,
+    "alt":[{"id":"legacyauctioneer.opendream","chance":100,"additional":true}]
+  },
+  {
+    "id":"legacyauctioneer.opendream",
+    "label":"Treasures, Like Stars",
+    "startdescription":"After my first day at Oriflamme's, my dreams gravitate towards my last. It was a cold day, and the stars were out bright like countless silver pearls. A portly woman came to sell at the auction house. She said, 'Every conclusion needs tie up loose ends.'",
+    "effects":{"ascensionlustrea":1, "compensationc":1},
+    "actionId":"dream",
+    "warmup":30,
+    "alt":[{"id":"legacyauctioneer.openstudy","chance":100,"additional":true}]
+  },
+  {
+    "id":"legacyauctioneer.openstudy",
+    "label":"A Gift From the Departed",
+    "startdescription":"The woman also left a book behind. It belonged to someone called #PREVIOUSCHARACTERNAME#, before they met an untimely demise.",
+    "effects":{"locksmithsdream2":1},
+    "actionId":"study",
+    "warmup":30
+  }
+]
+
+}

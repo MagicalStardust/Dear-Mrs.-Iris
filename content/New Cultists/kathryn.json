@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqkathryn",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"kathryn_a",
+    "icon":"kathryn",
+    "label":"Kathryn, an acquaintance",
+    "description": "Kathryn lost her husband to the Great War and two limbs to a tactical bombardment at her factory. She now makes prosthetics for war veterans in need. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "kathryn_b"},
+    "uniquenessgroup": "uqkathryn"
+  },
+  {
+    "id":"kathryn_b",
+    "icon":"kathryn",
+    "label":"Kathryn, a believer",
+    "description": "Kathryn used to make simple, wooden pegs. She is now learning the intricacies of steel, fire and turning cogs.",
+    "aspects": {"follower":1, "mortal":1, "forge":2},
+    "xtriggers": {"capturefollower": "kathryn_p", "rebellion": "kathryn_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "kathryn_c"},
+    "uniquenessgroup": "uqkathryn"
+  },
+  {
+    "id":"kathryn_c",
+    "icon":"kathryn",
+    "label":"Kathryn, a disciple",
+    "description": "Kathryn's designs are becoming more elaborate by the day, and her synthetic limbs work as well as her real ones. Its' a matter of time before they surprass them.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "forge":5},
+    "xtriggers": {"capturefollower": "kathryn_p", "rebellion": "kathryn_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_forge": "kathryn_d"},
+    "uniquenessgroup": "uqkathryn"
+  },
+  {
+    "id":"kathryn_d",
+    "icon":"kathryn",
+    "label":"Kathryn, a Reshaper",
+    "description": "Kathryn has replaced the rest of her limbs with prosthetics. We've heard her muttering something about organ transplants.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "forge":10},
+    "xtriggers": {"capturefollower": "kathryn_p", "rebellion": "kathryn_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqkathryn"
+  },
+  {
+    "id":"kathryn_r",
+    "icon":"kathryn",
+    "label":"Kathryn, a Troublemaker",
+    "description": "Kathryn has decided we're stifling her progress.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "kathryn_b", "rival_promotion": "kathryn_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqkathryn"
+  },
+  {
+    "id":"kathryn_r_c",
+    "icon":"kathryn",
+    "label":"Kathryn, a Rival",
+    "description": "The horrors of war are far from a novelty for Kathryn.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "kathryn_c", "rival_promotion": "kathryn_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqkathryn"
+  },
+  {
+    "id":"kathryn_r_d",
+    "icon":"kathryn",
+    "label":"Kathryn, a Long in the Making",
+    "description": "'Serving my country cost me an arm and a leg - quite literally. Your price will be much higher.'",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "kathryn_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqkathryn"
+  },
+  {
+    "id":"kathryn_p",
+    "icon":"kathryn",
+    "label":"Kathryn, a Prisoner",
+    "description": "Kathryn constantly complains about pain in her missing leg.",
+    "aspects": {"prisoner": 1, "forge": 5, "heart": 3, "lantern": 3, "grail":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqkathryn"
+  }
+]
+
+}

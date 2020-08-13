@@ -1,0 +1,92 @@
+{
+"elements":
+[
+  {
+    "id":"uqedgar",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"venerateslionsmith",
+    "icon":"shrine.lionsmith",
+    "label":"Venerates the Lionsmith",
+    "description":"This individual has a particular fondness for the Hour we call the Lionsmith.",
+    "isAspect":true
+  },
+  {
+    "id":"edgar_a",
+    "icon":"edgar",
+    "label":"Edgar, an acquaintance",
+    "description": "A vulgar, irreverent man from across the Atlantic. He is no stranger to more surreptitious kinds of industry. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1, "follower_lustpower": 1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "edgar_b"},
+    "uniquenessgroup": "uqedgar"
+  },
+  {
+    "id":"edgar_b",
+    "icon":"edgar",
+    "label":"Edgar, a believer",
+    "description": "Edgar tells people to stay out of his way. He insists on only the most efficient methods.",
+    "aspects": {"follower":1, "mortal":1, "forge":2, "venerateslionsmith":1, "follower_lustpower": 1},
+    "xtriggers": {"capturefollower": "edgar_p", "rebellion": "edgar_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "edgar_c"},
+    "uniquenessgroup": "uqedgar"
+  },
+  {
+    "id":"edgar_c",
+    "icon":"edgar",
+    "label":"Edgar, a disciple",
+    "description": "Edgar's designs are crueler, now; his ingenuities have grown remorseless.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "forge":5, "venerateslionsmith":1, "follower_lustpower": 1},
+    "xtriggers": {"capturefollower": "edgar_p", "rebellion": "edgar_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_forge": "edgar_d"},
+    "uniquenessgroup": "uqedgar"
+  },
+  {
+    "id":"edgar_d",
+    "icon":"edgar",
+    "label":"Edgar, a Reshaper",
+    "description": "Edgar's grip could shatter the bones in a man's hand. When one stands close to him, the faint whirring of clockwork becomes audible.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "forge":10, "venerateslionsmith":1, "follower_lustpower": 1},
+    "xtriggers": {"capturefollower": "edgar_p", "rebellion": "edgar_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqedgar"
+  },
+  {
+    "id":"edgar_r",
+    "icon":"edgar",
+    "label":"Edgar, a Troublemaker",
+    "description": "Edgar has decided that we are bad for business.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "edgar_b", "rival_promotion": "edgar_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqedgar"
+  },
+  {
+    "id":"edgar_r_c",
+    "icon":"edgar",
+    "label":"Edgar, a Rival",
+    "description": "Edgar sends us weapons. He says we need all the advantages we can get.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "edgar_c", "rival_promotion": "edgar_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqedgar"
+  },
+  {
+    "id":"edgar_r_d",
+    "icon":"edgar",
+    "label":"Edgar, a Long in the Making",
+    "description": "'I'll see what I can fashion from what remains. Just because you're useless now doesn't mean I can't turn you into something useful when you're finished.'",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "edgar_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqedgar"
+  },
+  {
+    "id":"edgar_p",
+    "icon":"edgar",
+    "label":"Edgar, a Prisoner",
+    "description": "When he is awake, Edgar throws fists and curses against the door. When he is asleep or exhausted, we reinforce Edgar's holdings against the damage he's inflicted.",
+    "aspects": {"prisoner": 1, "forge": 5, "heart": 3, "lantern": 3, "grail":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqedgar"
+  }
+]
+
+}

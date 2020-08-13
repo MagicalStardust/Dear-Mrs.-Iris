@@ -1,0 +1,95 @@
+{
+"recipes": [
+  {
+    "id": "getcommissionwilliam",
+    "label": "Get a Commission from William Jericho",
+    "startdescription": "The kindly professor from Cambridge has studied history his whole life. He now seeks to study the Histories beneath the one he knows.",
+    "description": "Here's what he needs.",
+    "actionId": "talk",
+    "requirements": {"williamready": 1, "gratitude": -1},
+    "aspects": {"commissiongiven": 1},
+    "warmup": 10,
+    "deckeffects": {"williamcommissions": 1},
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionwilliamsecrethistories",
+    "label": "Fulfill a Commission for William Jericho",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with the Cambridge professor. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticlesecrethistories": 1, "william": 1, "article": 1, "secrethistories": 2},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionwilliamsecrethistoriesb",
+    "label": "Fulfill a Commission for William Jericho",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with the Cambridge professor. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticlesecrethistoriesb": 1, "william": 1, "article": 1, "secrethistories": 4},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionwilliamsecrethistoriesc",
+    "label": "Fulfill a Commission for William Jericho",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with the Cambridge professor. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticlesecrethistoriesc": 1, "william": 1, "article": 1, "secrethistories": 6},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "talk_william_wantscommission",
+    "label": "A Commission?",
+    "startdescription": "Good day. Is the commission going to be long yet?",
+    "actionId": "talk",
+    "requirements": {"william": 1},
+    "craftable": true,
+    "hintonly": true
+  },
+  {
+    "id": "get_giftwilliama",
+    "label": "Call on a small favour from the kindly Professor.",
+    "startdescription": "A lesson? Well, I suppose you can sit in on one of my lectures.",
+    "description": "I know that these things can be very droll, but I hope you found it useful.",
+    "actionId": "talk",
+    "requirements": {"gratitude": -2, "williamready": 1},
+    "deckeffects": {"williamrewardsa": 3},
+    "warmup": 30,
+    "craftable": true
+  },
+  {
+    "id": "get_giftwilliamb",
+    "label": "Call on a large favour from the kindly Professor.",
+    "startdescription": "Hmm, I think a bit of private tutelage would be best suited here.",
+    "description": "Well, that's that from me. I'm glad that you're taking an interest in academic matters.",
+    "actionId": "talk",
+    "requirements": {"gratitude": -3, "williamready": 1},
+    "deckeffects": {"williamrewardsb": 2},
+    "warmup": 30,
+    "craftable": true
+  },
+  {
+    "id": "get_giftwilliamc",
+    "label": "Call on a substantial favour from the kindly Professor.",
+    "startdescription": "This is a pretty involved topic, but I think I can give you a couple of books that will help.",
+    "description": "No, no, keep them. I insist.",
+    "actionId": "talk",
+    "requirements": {"gratitude": 3, "williamready": 1},
+    "deckeffects": {"williamrewardsc": 1},
+    "warmup": 30,
+    "craftable": true
+  }
+
+]
+}

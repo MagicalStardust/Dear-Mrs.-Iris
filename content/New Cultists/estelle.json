@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqestelle",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"estelle_a",
+    "icon":"estelle",
+    "label":"Estelle, an acquaintance",
+    "description": "Estelle is a recently widowed young woman with a lingering past. She hides her scars well; both physical, and mental. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "estelle_b"},
+    "uniquenessgroup": "uqestelle"
+  },
+  {
+    "id":"estelle_b",
+    "icon":"estelle",
+    "label":"Estelle, a believer",
+    "description": "Estelle is solemn and quiet. We learn from her how to accept and endure the inevitable.",
+    "aspects": {"follower":1, "mortal":1, "knock":2, "winter":2, "follower_scar_winter": 1},
+    "xtriggers": {"capturefollower": "estelle_p", "rebellion": "estelle_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "estelle_c"},
+    "uniquenessgroup": "uqestelle"
+  },
+  {
+    "id":"estelle_c",
+    "icon":"estelle",
+    "label":"Estelle, a disciple",
+    "description": "'L'enfer, c'est les autres', Estelle says, or 'Hell is other people'. We learn from her how to stand in defiance against adversity.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "knock":5, "winter":2, "edge":2, "follower_scar_winter":1, "follower_scar_edge":1},
+    "xtriggers": {"capturefollower": "estelle_p", "rebellion": "estelle_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_knock": "estelle_d"},
+    "uniquenessgroup": "uqestelle"
+  },
+  {
+    "id":"estelle_d",
+    "icon":"estelle",
+    "label":"Estelle, a Key",
+    "description": "Estelle is the gateway, and the key. We learn from her how to seek ways previousy thought impossible, and open doors previously thought forever shut.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "knock":12, "winter":2, "edge":2, "follower_scar_winter":1, "follower_scar_edge":1, "follower_scar_knock":1},
+    "xtriggers": {"capturefollower": "estelle_p", "rebellion": "estelle_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqestelle"
+  },
+  {
+    "id":"estelle_r",
+    "icon":"estelle",
+    "label":"Estelle, a Troublemaker",
+    "description": "Estelle walked away once. It is easier for her to walk away again.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "estelle_b", "rival_promotion": "estelle_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqestelle"
+  },
+  {
+    "id":"estelle_r_c",
+    "icon":"estelle",
+    "label":"Estelle, a Rival",
+    "description": "Estelle says that lessons can be learned from wounds, and offers to be our teacher.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "estelle_c", "rival_promotion": "estelle_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqestelle"
+  },
+  {
+    "id":"estelle_r_d",
+    "icon":"estelle",
+    "label":"Estelle, a Long in the Making",
+    "description": "Estelle claims that she loves us, and that is why she does the things she does.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "estelle_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqestelle"
+  },
+  {
+    "id":"estelle_p",
+    "icon":"estelle",
+    "label":"Estelle, a Prisoner",
+    "description": "We maek sure to keep all sharp objects away from Estelle. Despite this, she somehow gains new scars every day.",
+    "aspects": {"prisoner": 1, "knock": 5, "heart": 3, "lantern": 3, "grail":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqestelle"
+  }
+]
+
+}

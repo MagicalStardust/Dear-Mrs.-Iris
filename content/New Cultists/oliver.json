@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqoliver",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"oliver_a",
+    "icon":"oliver",
+    "label":"Oliver, an acquaintance",
+    "description": "Oliver first entered a mine shaft when he was seven. Now his lungs are as black as the coal he digs out. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "oliver_b"},
+    "uniquenessgroup": "uqoliver"
+  },
+  {
+    "id":"oliver_b",
+    "icon":"oliver",
+    "label":"Oliver, a believer",
+    "description": "Oliver has taken an affinity to warmth. He spends hours by the fireplace, but insists that it is never coal-fired.",
+    "aspects": {"follower":1, "mortal":1, "forge":2},
+    "xtriggers": {"capturefollower": "oliver_p", "rebellion": "oliver_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "oliver_c"},
+    "uniquenessgroup": "uqoliver"
+  },
+  {
+    "id":"oliver_c",
+    "icon":"oliver",
+    "label":"Oliver, a disciple",
+    "description": "Oliver works in the blistering heat of the forge. His tar-black lungs sputter and hack, and sometimes sparks fly from his mouth.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "forge":5},
+    "xtriggers": {"capturefollower": "oliver_p", "rebellion": "oliver_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_forge": "oliver_d"},
+    "uniquenessgroup": "uqoliver"
+  },
+  {
+    "id":"oliver_d",
+    "icon":"oliver",
+    "label":"Oliver, a Reshaper",
+    "description": "Oliver cooks and forges with his bare hands. The heat seems to not affect him at all. Burns marks his whole body, but we feel like he prefers it that way.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "forge":10},
+    "xtriggers": {"capturefollower": "oliver_p", "rebellion": "oliver_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqoliver"
+  },
+  {
+    "id":"oliver_r",
+    "icon":"oliver",
+    "label":"Oliver, a Troublemaker",
+    "description": ".",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "oliver_b", "rival_promotion": "oliver_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqoliver"
+  },
+  {
+    "id":"oliver_r_c",
+    "icon":"oliver",
+    "label":"Oliver, a Rival",
+    "description": ".",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "oliver_c", "rival_promotion": "oliver_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqoliver"
+  },
+  {
+    "id":"oliver_r_d",
+    "icon":"oliver",
+    "label":"Oliver, a Long in the Making",
+    "description": "",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "oliver_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqoliver"
+  },
+  {
+    "id":"oliver_p",
+    "icon":"oliver",
+    "label":"Oliver, a Prisoner",
+    "description": "Oliver claims he didn't have much time left anyway.",
+    "aspects": {"prisoner": 1, "forge": 5, "heart": 3, "lantern": 3, "grail":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqoliver"
+  }
+]
+
+}

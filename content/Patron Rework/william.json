@@ -1,0 +1,140 @@
+{
+
+"elements": [
+  {
+    "id": "williamgratitude",
+    "icon":"williama",
+    "label": "Jericho's Gratitude [Minor]",
+    "description": "I have earned the favour of the kindly professor. [Use this to receive a gift from William Jericho.]",
+    "aspects": {"gratitude": 1}
+  },
+  {
+    "id": "williamgratitudeb",
+    "icon":"williamb",
+    "label": "Jericho's Gratitude [Major]",
+    "description": "I have earned the favour of the kindly professor. [Use this to receive a gift from William Jericho.]",
+    "aspects": {"gratitude": 2}
+  },
+  {
+    "id": "williamgratitudec",
+    "icon":"williamc",
+    "label": "Jericho's Gratitude [Substantial]",
+    "description": "I have earned the favour of the kindly professor. [Use this to receive a gift from William Jericho.]",
+    "aspects": {"gratitude": 3}
+  },
+  {
+    "id": "williamready",
+    "icon":"william",
+    "label": "William Jericho",
+    "description": "William Jericho is a history lecturer at Cambridge, and the survivor of a tragic expedition to Spain. He wants to know more about the circumstances of that disaster.",
+    "aspects": {"patron":1, "mortal":1},
+    "xtriggers": {"commissiongiven":"william", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "slots":
+    [
+      {
+        "id": "Gratitude",
+        "actionId": "talk",
+        "required": {"gratitude": 1},
+        "consumes": true
+      }
+    ],
+    "unique": true
+  },
+  {
+    "id": "william",
+    "icon":"william",
+    "label": "William Jericho",
+    "description": "William Jericho is a history lecturer at Cambridge, and the survivor of a tragic expedition to Spain. He has offered you a commission.",
+    "aspects": {"gangleader": 1, "patron":1, "mortal":1},
+    "slots":
+    [
+      {
+        "id": "Commission",
+        "actionId": "talk",
+        "required": {"commission": 1}
+      },
+      {
+        "id": "Manuscript",
+        "actionId": "talk",
+        "required": {"article": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled":"williamaway", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "unique": true,
+
+  },
+  {
+    "id": "williamaway",
+    "icon":"william",
+    "label": "William Jericho",
+    "description": "William Jericho is a history lecturer at Cambridge, and the survivor of a tragic expedition to Spain. He needs time to study the knowledge I delivered to him, but he'll be back soon.",
+    "lifetime": 120,
+    "decayTo": "williamready",
+    "unique": true
+  },
+  {
+    "id": "commissionarticlesecrethistories",
+    "icon": "commissionarticlesecrethistories",
+    "label": "Commission: Secret Histories",
+    "description": "William Jericho wants to know what happened in Spain, and why he was the only one spared. [You'll need a matching Lore fragment of at least level 2 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "williamgratitude"}
+  },
+  {
+    "id": "commissionarticlesecrethistoriesb",
+    "icon": "commissionarticlesecrethistoriesb",
+    "label": "Commission: Secret Histories (Substantial)",
+    "description": "William Jericho wants to know what happened in Spain, and why his notes seemingly contradict each other. [You'll need a matching Lore fragment of at least level 4 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "williamgratitudeb"}
+  },
+  {
+    "id": "commissionarticlesecrethistoriesc",
+    "icon": "commissionarticlesecrethistoriesc",
+    "label": "Commission: Secret Histories (Very Substantial)",
+    "description": "William Jericho wants to know what happened in Spain, and why he burns at the stake in his dreams. [You'll need a matching Lore fragment of at least level 6 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "williamgratitudec"}
+  }
+]
+
+}

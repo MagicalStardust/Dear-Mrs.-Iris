@@ -1,0 +1,19 @@
+{
+"decks": [
+  {
+    "id":"acquaintances",
+    "label":"Acquaintances",
+    "description":"So many people in the world, and so few worth knowing.",
+    "spec":["howe_a","maria_a","kelar_a",
+            "marco_a","clara_a","phoebe_a",
+            "edgar_a","oliver_a","kathryn_a",
+            "vicente_a","monica_a","sasha_a",
+            "odette_a","robert_a","zachary_a",
+            "claire_a","charity_a","yemu_a",
+            "odile_a","nathaniel_a","constance_a",
+            "morvan_a","estelle_a","otto_a"],
+    "defaultcard":"mistakenidentity"
+  }
+]
+
+}

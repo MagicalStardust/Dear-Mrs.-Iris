@@ -1,0 +1,92 @@
+{
+"elements":
+[
+  {
+    "id":"uqvicente",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"veneratescolonel",
+    "icon":"shrine.colonel",
+    "label":"Venerates the Colonel",
+    "description":"This individual has a particular fondness for the Hour we call the Colonel.",
+    "isAspect":true
+  },
+  {
+    "id":"vicente_a",
+    "icon":"vicente",
+    "label":"Vicente, an acquaintance",
+    "description": "A Spaniard with a single eye and a strange gaze. He says he's looking for work; maybe we could indulge him. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "vicente_b"},
+    "uniquenessgroup": "uqvicente"
+  },
+  {
+    "id":"vicente_b",
+    "icon":"vicente",
+    "label":"Vicente, a believer",
+    "description": "Vicente smiles often, and his scars stretch each and every time. Perhaps he's just waiting for a good opportunity.",
+    "aspects": {"follower":1, "mortal":1, "edge":2, "veneratescolonel":1},
+    "xtriggers": {"capturefollower": "vicente_p", "rebellion": "vicente_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "vicente_c"},
+    "uniquenessgroup": "uqvicente"
+  },
+  {
+    "id":"vicente_c",
+    "icon":"vicente",
+    "label":"Vicente, a disciple",
+    "description": "Vicente seems to have increasingly more and more scars. He falls silent when asked about their origins.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "edge":5, "veneratescolonel":1},
+    "xtriggers": {"capturefollower": "vicente_p", "rebellion": "vicente_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_edge": "vicente_d"},
+    "uniquenessgroup": "uqvicente"
+  },
+  {
+    "id":"vicente_d",
+    "icon":"vicente",
+    "label":"Vicente, an Assassin",
+    "description": "There is now no spot of flesh which is not scar on Vicente. And his victims seem to not have it at all.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "edge":10, "veneratescolonel":1},
+    "xtriggers": {"capturefollower": "vicente_p", "rebellion": "vicente_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqvicente"
+  },
+  {
+    "id":"vicente_r",
+    "icon":"vicente",
+    "label":"Vicente, a Troublemaker",
+    "description": "Vicente seems to have grown distant.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "vicente_b", "rival_promotion": "vicente_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqvicente"
+  },
+  {
+    "id":"vicente_r_c",
+    "icon":"vicente",
+    "label":"Vicente, a Rival",
+    "description": "Vicente is never seen nowadays. But we know he's there. He makes sure to let us know that.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "vicente_c", "rival_promotion": "vicente_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqvicente"
+  },
+  {
+    "id":"vicente_r_d",
+    "icon":"vicente",
+    "label":"Vicente, a Long in the Making",
+    "description": "He assures us this all was the branches of cunning, and the root of victory.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "vicente_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqvicente"
+  },
+  {
+    "id":"vicente_p",
+    "icon":"vicente",
+    "label":"Vicente, a Prisoner",
+    "description": "Vicente scratches slowly against the wall and his own skin. He does not talk to us anymore.",
+    "aspects": {"prisoner": 1, "edge": 5, "heart": 3, "grail":3, "lantern":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqvicente"
+  }
+]
+
+}

@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqodile",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"odile_a",
+    "icon":"odile",
+    "label":"Odile, an acquaintance",
+    "description": "This woman of striking beauty used to be a famous danseuse, before her main role was taken from her. That is when she took something in return. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"follower_lustenlightenment":1, "acquaintance":1, "mortal":1, "squarrel": 1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "odile_b"},
+    "uniquenessgroup": "uqodile"
+  },
+  {
+    "id":"odile_b",
+    "icon":"odile",
+    "label":"Odile, a believer",
+    "description": "Her loyalties are hard to earn, yet for now they eclipse her ambitions. Odile has clipped her black wings to walk behind me, as my silken shadow. ",
+    "aspects": { "follower_lustenlightenment":1, "follower":1, "mortal":1, "grail":2, "squarrel": 1},
+    "xtriggers": {"capturefollower": "odile_p", "rebellion": "odile_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "odile_c"},
+    "uniquenessgroup": "uqodile"
+  },
+  {
+    "id":"odile_c",
+    "icon":"odile",
+    "label":"Odile, a disciple",
+    "description": "Odile excites the heartbeat to a brisé with a single ivory smile. It is hard to talk to her without getting distracted.",
+    "aspects": {"potential": 1, "follower_lustenlightenment":1, "disciple": 1, "follower":1, "mortal":1, "grail":5, "squarrel": 1},
+    "xtriggers": {"capturefollower": "odile_p", "rebellion": "odile_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_grail": "odile_d"},
+    "uniquenessgroup": "uqodile"
+  },
+  {
+    "id":"odile_d",
+    "icon":"odile",
+    "label":"Odile, a Cyprian",
+    "description": "Our Odile is a delight to look upon. Her velvets are the colour of rubies smuggled during a moonless soirée.",
+    "aspects": {"exalted": 1, "follower_lustenlightenment":1, "disciple": 1, "follower":1, "mortal":1, "grail":10, "squarrel": 1},
+    "xtriggers": {"capturefollower": "odile_p", "rebellion": "odile_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqodile"
+  },
+  {
+    "id":"odile_r",
+    "icon":"odile",
+    "label":"Odile, a Troublemaker",
+    "description": "This isn't her first betrayal, nor is it her last.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1, "squarrel": 1},
+    "xtriggers": {"recruiting": "odile_b", "rival_promotion": "odile_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqodile"
+  },
+  {
+    "id":"odile_r_c",
+    "icon":"odile",
+    "label":"Odile, a Rival",
+    "description": "Odile has always enjoyed being a soloist.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1, "squarrel": 1},
+    "xtriggers": {"recruiting": "odile_c", "rival_promotion": "odile_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqodile"
+  },
+  {
+    "id":"odile_r_d",
+    "icon":"odile",
+    "label":"Odile, a Long in the Making",
+    "description": "Odile is prepared to spread her wings and rise ever higher. We must silence her swansong.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1, "squarrel": 1},
+    "xtriggers": {"recruiting": "odile_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqodile"
+  },
+  {
+    "id":"odile_p",
+    "icon":"odile",
+    "label":"Odile, a Prisoner",
+    "description": "She rises in anger and collapses in despair. We ignore her sweet whispers to the best of our abilities.",
+    "aspects": {"prisoner": 1, "grail": 5, "heart": 3, "lantern": 3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqodile"
+  }
+]
+
+}

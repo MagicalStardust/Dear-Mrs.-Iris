@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqyemu",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"yemu_a",
+    "icon":"yemu",
+    "label":"Yemu, an acquaintance",
+    "description": "A clingy sort with an eye for fashion. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "yemu_b"},
+    "uniquenessgroup": "uqyemu"
+  },
+  {
+    "id":"yemu_b",
+    "icon":"yemu",
+    "label":"Yemu, a believer",
+    "description": "Yemu was young when his brother left for the Great War. He hasn't yet returned, but Yemu is optimistic.",
+    "aspects": {"follower":1, "mortal":1, "heart":2},
+    "xtriggers": {"capturefollower": "yemu_p", "rebellion": "yemu_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "yemu_c"},
+    "uniquenessgroup": "uqyemu"
+  },
+  {
+    "id":"yemu_c",
+    "icon":"yemu",
+    "label":"Yemu, a disciple",
+    "description": "He spends many an evening outfitting the great and the rich. Rumour has it his inspiration is a mysterious warlock from overseas, but Yemu laughs rumours off with that silky laugh of his.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "heart":5},
+    "xtriggers": {"capturefollower": "yemu_p", "rebellion": "yemu_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_heart": "yemu_d"},
+    "uniquenessgroup": "uqyemu"
+  },
+  {
+    "id":"yemu_d",
+    "icon":"yemu",
+    "label":"Yemu, a Tarantellist",
+    "description": "His fashion has taken a turn for the obsessive and artful. Coats that hold two ladies at once, and trousers with pearls stitched in. He has sparked four new crazes this week alone. ",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "heart":10},
+    "xtriggers": {"capturefollower": "yemu_p", "rebellion": "yemu_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqyemu"
+  },
+  {
+    "id":"yemu_r",
+    "icon":"yemu",
+    "label":"Yemu, a Troublemaker",
+    "description": "A troublesome sort with an eye for societal faux-pas.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "yemu_b", "rival_promotion": "yemu_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqyemu"
+  },
+  {
+    "id":"yemu_r_c",
+    "icon":"yemu",
+    "label":"Yemu, a Rival",
+    "description": "Parties become hard to attend when you don't keep up with his fashions.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "yemu_c", "rival_promotion": "yemu_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqyemu"
+  },
+  {
+    "id":"yemu_r_d",
+    "icon":"yemu",
+    "label":"Yemu, a Long in the Making",
+    "description": "He has found his missing brother. He tells us the Thunderskin won't protect us anymore.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "yemu_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqyemu"
+  },
+  {
+    "id":"yemu_p",
+    "icon":"yemu",
+    "label":"Yemu, a Prisoner",
+    "description": "He begs for a companion in his cell. We have grown wise against it after he made his last 'overcoat'.",
+    "aspects": {"prisoner": 1, "heart": 5, "lantern": 3, "grail":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqyemu"
+  }
+]
+
+}

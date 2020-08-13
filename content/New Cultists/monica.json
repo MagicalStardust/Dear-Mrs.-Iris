@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqmonica",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"monica_a",
+    "icon":"monica",
+    "label":"Monica, an acquaintance",
+    "description": "Monica toured some of the most prestigious dueling fraternities in Germany, before her father found out. She had to leave the country, but her skill remained with her. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1, "follower_lustpower": 1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "monica_b"},
+    "uniquenessgroup": "uqmonica"
+  },
+  {
+    "id":"monica_b",
+    "icon":"monica",
+    "label":"Monica, a believer",
+    "description": "Monica's wit is almost as sharp as her blade. Both serve us well.",
+    "aspects": {"follower":1, "mortal":1, "edge":2, "follower_lustpower":1},
+    "xtriggers": {"capturefollower": "monica_p", "rebellion": "monica_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "monica_c"},
+    "uniquenessgroup": "uqmonica"
+  },
+  {
+    "id":"monica_c",
+    "icon":"monica",
+    "label":"Monica, a disciple",
+    "description": "Monica handles herself with discipline and grace, and is all the more deadlier for it.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "edge":5, "follower_lustpower":1},
+    "xtriggers": {"capturefollower": "monica_p", "rebellion": "monica_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_edge": "monica_d"},
+    "uniquenessgroup": "uqmonica"
+  },
+  {
+    "id":"monica_d",
+    "icon":"monica",
+    "label":"Monica, an Assassin",
+    "description": "A single strike is all Monica needs. She takes pride in the meticulousness of her work.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "edge":10, "follower_lustpower":1},
+    "xtriggers": {"capturefollower": "monica_p", "rebellion": "monica_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmonica"
+  },
+  {
+    "id":"monica_r",
+    "icon":"monica",
+    "label":"Monica, a Troublemaker",
+    "description": "Monica has decided that brotherhoods are not for her after all.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "monica_b", "rival_promotion": "monica_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmonica"
+  },
+  {
+    "id":"monica_r_c",
+    "icon":"monica",
+    "label":"Monica, a Rival",
+    "description": "We have been sent a white, satin dueling glove. 'To formalize things', the attached note says.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "monica_c", "rival_promotion": "monica_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmonica"
+  },
+  {
+    "id":"monica_r_d",
+    "icon":"monica",
+    "label":"Monica, a Long in the Making",
+    "description": "Monica handles herself like nobility, and wields her rapier with surgical precision. She makes for a most formidable foe now.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "monica_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmonica"
+  },
+  {
+    "id":"monica_p",
+    "icon":"monica",
+    "label":"Monica, a Prisoner",
+    "description": "Monica demands satisfaction on the field of battle. We ignore her requests.",
+    "aspects": {"prisoner": 1, "edge": 5, "heart": 3, "grail":3, "lantern":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqmonica"
+  }
+]
+
+}

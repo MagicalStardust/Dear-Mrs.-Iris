@@ -1,0 +1,64 @@
+{
+
+"elements":[
+  {
+    "id":"legacyauctioneerjob.letter",
+    "icon":"mapbookdealer",
+    "label": "Directions to the Auction House",
+    "description": "A square piece of paper with scrawled instructions. They will lead me to my new, old workplace.",
+    "aspects":{"job":1}
+  },
+  {
+    "id":"legacyauctioneerjob.reopen",
+    "icon":"hq.warehouse",
+    "label": "Closed Auction House",
+    "description": "We're close to reopening, but there is stock to unpack and decorations to put up. I should help.",
+    "aspects":{"job":1}
+  },
+  {
+    "id": "legacyauctioneerjob",
+    "icon": "connection.ruler",
+    "label": "A Job at Oriflamme's",
+    "description": "yeehaw",
+    "aspects":{"job":1},
+    "slots":[
+      {
+        "id":"oriflamme",
+        "label":"Oriflamme's",
+        "actionId":"work",
+        "required":{"locationauctionhouse":1}
+      },
+      {
+        "id":"trinkets",
+        "label":"Trinkets",
+        "actionId":"work",
+        "required":{"auctionable":1}
+      }
+    ]
+  },
+  {
+    "id":"legacyauctioneerjob.assistant",
+    "icon": "elvi",
+    "label": "Vicky, the Ruffian",
+    "description": "A cocky young girl with sharp eyes and a sharper tongue. She can navigate the city faster than anyone.",
+    "aspects":{"mortal":1}
+  },
+  {
+    "id":"trinketa",
+    "icon":"jumble",
+    "label":"A Minor Curiosity",
+    "description":"Trinkets that may fetch a minimal price at the auction. Still, better than nothing.",
+    "aspects":{"auctionable":1}
+  },
+
+  {
+    "id":"ascensionlustrea",
+    "icon":"temptationlustre",
+    "label":"Temptation: Lustre",
+    "description":"[This card will allow you to win a Lustre victory, if you upgrade it far enough. Dreaming about it might advance or change it.]",
+    "aspects":{"desire":1}
+  }
+
+]
+
+}

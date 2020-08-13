@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqcharity",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"charity_a",
+    "icon":"charity",
+    "label":"Charity, an acquaintance",
+    "description": "A cabaret dancer of some repute, who gives it her all in every performance. Charity will make you happy, people say. Charity will brighten your day.",
+    "aspects": {"acquaintance":1, "mortal":1, "follower_lustchange": 1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "charity_b"},
+    "uniquenessgroup": "uqcharity"
+  },
+  {
+    "id":"charity_b",
+    "icon":"charity",
+    "label":"Charity, a believer",
+    "description": "Charity dotes on the others to an almost unhealthy degree. She says she can't help but care for them.",
+    "aspects": {"follower":1, "mortal":1, "heart":2, "follower_lustchange": 1},
+    "xtriggers": {"capturefollower": "charity_p", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "charity_c"},
+    "uniquenessgroup": "uqcharity"
+  },
+  {
+    "id":"charity_c",
+    "icon":"charity",
+    "label":"Charity, a disciple",
+    "description": "Charity dances when we ask, and stops when we ask. We have to remember to ask her to stop.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "heart":5, "follower_lustchange": 1},
+    "xtriggers": {"capturefollower": "charity_p", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_heart": "charity_d"},
+    "uniquenessgroup": "uqcharity"
+  },
+  {
+    "id":"charity_d",
+    "icon":"charity",
+    "label":"Charity, a Tarantellist",
+    "description": "Charity gives everything she has to us, and then some more. In this, there is no swaying her mind.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "heart":10, "follower_lustchange": 1},
+    "xtriggers": {"capturefollower": "charity_p", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqcharity"
+  },
+  {
+    "id":"charity_r",
+    "icon":"charity",
+    "label":"Charity, a Troublemaker",
+    "description": "Charity dances for someone else now.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "charity_b", "rival_promotion": "charity_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqcharity"
+  },
+  {
+    "id":"charity_r_c",
+    "icon":"charity",
+    "label":"Charity, a Rival",
+    "description": "People give us pointed looks in the streets. Its' easy to tell that Charity has visited them.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "charity_c", "rival_promotion": "charity_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqcharity"
+  },
+  {
+    "id":"charity_r_d",
+    "icon":"charity",
+    "label":"Vharity, a Long in the Making",
+    "description": "Charity plans to perform for her largest audience yet. We're not invited.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "charity_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqcharity"
+  },
+  {
+    "id":"charity_p",
+    "icon":"charity",
+    "label":"Charity, a Prisoner",
+    "description": "Charity begs and wails to anyone that comes close to her cell. She promises she'll do better next time. She pleads for a chance to improve.",
+    "aspects": {"prisoner": 1, "heart": 5, "lantern": 3, "grail":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqcharity"
+  }
+]
+
+}

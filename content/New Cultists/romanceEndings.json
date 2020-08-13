@@ -1,0 +1,68 @@
+{
+"endings":
+[
+  {
+    "id":"monicavictory",
+    "label":"EVER AFTER:MONICA",
+    "description":"[This might be considered a victory. But the House is no place for lovers.]",
+    "image":"madrugad",
+    "flavour":"Melancholy",
+    "anim":"DramaticLight",
+    "achievement":"XXX"
+  },
+  {
+    "id":"nathanielvictory",
+    "label":"EVER AFTER:VORTH",
+    "description":"One night, it's a visit to an opera house, where he seems more pre-occupied with how I'm enjoying myself than the actual piece played. The other, we're moving through bazaars and buying only the silliest of works and figurines, and it's hard to hold back a giggle when he marvels at the nooks and crannies. Some nights, it is just Nathaniel, and I, holding, feeling. I can sometimes smell smoke from his lips when he breathes it into me, but mostly, he's like mint, and a good year's wine. [This might be considered a victory. But the House is no place for lovers.]",
+    "image":"madrugad",
+    "flavour":"Melancholy",
+    "anim":"DramaticLight",
+    "achievement":"XXX"
+  },
+  {
+    "id":"edgarvictory",
+    "label":"EVER AFTER:EDGAR",
+    "description":"There’s always some modification, some greater efficiency Edgar’s bringing to our new life. When he returns in the evening, his powerful arms marked by machine oil and engine-soot, he always comes straight to me. His cavalier pride remains, but I alone get the privilege of seeing him when he’s vulnerable. And in those vulnerable moments when his body recalibrates beside mine, the beat of our hearts will fall into lockstep, as seamless and precise as clockwork. [This might be considered a victory. But the House is no place for lovers.]",
+    "image":"madrugad",
+    "flavour":"Melancholy",
+    "anim":"DramaticLight",
+    "achievement":"XXX"
+  },
+  {
+    "id":"marcovictory",
+    "label":"EVER AFTER:MARCO",
+    "description":"Marco points his camera at things he believes can be presented in a more beautiful way - he never points his camera at me. I am not meant to be one of his captured moments or scripted characters, pressed into nitrate and wax. I am more, and together we are more than that. So, even when we have become familiar with all the lovely manipulations of light and shadow, we will choose instead to be bright. [This might be considered a victory. But the House is no place for lovers.]",
+    "image":"madrugad",
+    "flavour":"Melancholy",
+    "anim":"DramaticLight",
+    "achievement":"XXX"
+  },
+  {
+    "id":"charityvictory",
+    "label":"EVER AFTER:CHARITY",
+    "description":"She plans her schedule in accordance with mine, and always makes sure that I exist in comfort. It is tiring and frightening sometimes, to own another soul to this degree. But when the night sets and the performance begins, I find that I cannot look away. She doesn't dance in the club anymore, nor does she dance anywhere else. Charity's grace is mine alone, as is her love. [This might be considered a victory. But the House is no place for lovers.]",
+    "image":"madrugad",
+    "flavour":"Melancholy",
+    "anim":"DramaticLight",
+    "achievement":"XXX"
+  },
+  {
+    "id":"ottovictory",
+    "label":"EVER AFTER:OTTO",
+    "description":"Snakes are solitary creatures, and yet here is one who will never leave my company. His collection is still vast; his curiosities still morbid - but I am the sunned rock, and when he is cold, he will come to me. We stroll down winding streets and words fall from our lips like scales from a serpent. And when all those scales fall away, we see each other, plain and bared and beautiful. [This might be considered a victory. But the House is no place for lovers.]",
+    "image":"madrugad",
+    "flavour":"Melancholy",
+    "anim":"DramaticLight",
+    "achievement":"XXX"
+  },
+  {
+    "id":"odettevictory",
+    "label":"EVER AFTER:ODETTE",
+    "description":"I was wrong; I couldn't prevent her from breaking apart. And yet I hold her pieces close, and every one of them smiles at me with gratitude. It might seem impossible now, but our life is still a lakeside ballet. When her frightened voice rises into the night, I kiss her tears. When she feels as if she is falling, I catch her. When she lies about doing better, I believe her every word. Rarely, when her genuine laughter finally fills our house, I know why I kiss, why I catch, why I believe. [This might be considered a victory. But the House is no place for lovers.]",
+    "image":"madrugad",
+    "flavour":"Melancholy",
+    "anim":"DramaticLight",
+    "achievement":"XXX"
+  }
+]
+}

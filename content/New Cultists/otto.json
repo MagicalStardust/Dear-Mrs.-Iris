@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqotto",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"otto_a",
+    "icon":"otto",
+    "label":"Otto, an acquaintance",
+    "description": "An sharp-eyed herpetologist who’s spent several months abroad in India for his studies. His vast collection of specimens isn’t nearly enough for his curiosity. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "otto_b"},
+    "uniquenessgroup": "uqotto"
+  },
+  {
+    "id":"otto_b",
+    "icon":"otto",
+    "label":"Otto, a believer",
+    "description": "There are patterns in the motions and manners of serpents. Otto is becoming more aware of those patterns.",
+    "aspects": {"follower":1, "mortal":1, "knock":2},
+    "xtriggers": {"capturefollower": "otto_p", "rebellion": "otto_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "otto_c"},
+    "uniquenessgroup": "uqotto"
+  },
+  {
+    "id":"otto_c",
+    "icon":"otto",
+    "label":"Otto, a disciple",
+    "description": "Otto knows how much venom has to be administered to save a life. Consequently, he also knows how much will end one.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "knock":5},
+    "xtriggers": {"capturefollower": "otto_p", "rebellion": "otto_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_knock": "otto_d"},
+    "uniquenessgroup": "uqotto"
+  },
+  {
+    "id":"otto_d",
+    "icon":"otto",
+    "label":"Otto, a Key",
+    "description": "Otto keeps his specimens close - in his pockets, up his sleeves. He cannot be denied entry.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "knock":10},
+    "xtriggers": {"capturefollower": "otto_p", "rebellion": "otto_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqotto"
+  },
+  {
+    "id":"otto_r",
+    "icon":"otto",
+    "label":"Otto, a Troublemaker",
+    "description": "All of his snakes were released from their enclosures. We can only guess when they will come back and visit us.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "otto_b", "rival_promotion": "otto_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqotto"
+  },
+  {
+    "id":"otto_r_c",
+    "icon":"otto",
+    "label":"Otto, a Rival",
+    "description": "His forked tongue is deadly, but his venoms are deadlier still.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "otto_c", "rival_promotion": "otto_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqotto"
+  },
+  {
+    "id":"otto_r_d",
+    "icon":"otto",
+    "label":"Otto, a Long in the Making",
+    "description": "'Repeated exposure to snake venoms builds resistance, and then immunity. Shall we test the virility of your own blood?'",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "otto_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqotto"
+  },
+  {
+    "id":"otto_p",
+    "icon":"otto",
+    "label":"Otto, a Prisoner",
+    "description": "Otto coils himself in the corner of his cell.",
+    "aspects": {"prisoner": 1, "knock": 5, "heart": 3, "lantern": 3, "grail":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqotto"
+  }
+]
+
+}

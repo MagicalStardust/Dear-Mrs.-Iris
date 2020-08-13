@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqhowe",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"howe_a",
+    "icon":"howe",
+    "label":"Howe, an acquaintance",
+    "description": "There is something... unsettling, about this child's overeager smile. But he is a helpful sort. Perhaps he could made into a useful sort. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "howe_b"},
+    "uniquenessgroup": "uqhowe"
+  },
+  {
+    "id":"howe_b",
+    "icon":"howe",
+    "label":"Howe, a believer",
+    "description": "Howe has proven to be receptive, but no less eerie. We feel he may know more than he lets on.",
+    "aspects": {"follower":1, "mortal":1, "moth":2},
+    "xtriggers": {"capturefollower": "howe_p", "rebellion": "howe_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "howe_c"},
+    "uniquenessgroup": "uqhowe"
+  },
+  {
+    "id":"howe_c",
+    "icon":"howe",
+    "label":"Howe, a disciple",
+    "description": "Howe often brings back little gifts, he will never say where he found them. 'You make things a lot easer for me, so I figured I would return the favor.' He also does not say what he means by that.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "moth":5},
+    "xtriggers": {"capturefollower": "howe_p", "rebellion": "howe_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_moth": "howe_d"},
+    "uniquenessgroup": "uqhowe"
+  },
+  {
+    "id":"howe_d",
+    "icon":"howe",
+    "label":"Howe, a Skintwister",
+    "description": "Howe takes many things rather literally; metaphors, names and his title among the most prominent. 'Never here though, she's not looking when I do it here.' At this point we know better than to ask him to elaborate.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "moth":10},
+    "xtriggers": {"capturefollower": "howe_p", "rebellion": "howe_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqhowe"
+  },
+  {
+    "id":"howe_r",
+    "icon":"howe",
+    "label":"Howe, a Troublemaker",
+    "description": "Howe has been very bored as of late.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "howe_b", "rival_promotion": "howe_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqhowe"
+  },
+  {
+    "id":"howe_r_c",
+    "icon":"howe",
+    "label":"Howe, a Rival",
+    "description": "'The best part about being a kid is that no one blames you for the Percussigant charging through the main streets.'",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "howe_c", "rival_promotion": "howe_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqhowe"
+  },
+  {
+    "id":"howe_r_d",
+    "icon":"howe",
+    "label":"Howe, a Long in the Making",
+    "description": "Calling what Howe does to people 'Mercy' is not entirely wrong.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "howe_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqhowe"
+  },
+  {
+    "id":"howe_p",
+    "icon":"howe",
+    "label":"Howe, a Prisoner",
+    "description": "We never expected such a small child to have such a loud voice. 'Please! You can't leave me in here! SHE'S COMING!' We hear him scream.",
+    "aspects": {"prisoner": 1, "moth": 5, "heart": 3, "grail":3, "lantern":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqhowe"
+  }
+]
+
+}

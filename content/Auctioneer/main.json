@@ -1,0 +1,18 @@
+{
+"legacies": [
+  {
+    "id": "legacyauctioneer",
+    "label": "Auctioneer",
+    "image": "aspirant",
+    "description": "The fire was unexplained, and unexpected. The only thing left to pick up was ashes.",
+    "startdescription": "My employers had to move their business to a new, smaller venue. I received a letter when they secured a location, inviting me back. I did not hesitate.",
+    "effects": {"health":1, "reason": 1, "legacyauctioneerjob.letter":1},
+    "fromEnding": "despairending",
+    "availableWithoutEndingMatch": true,
+    "startingVerbId": "work",
+    "newstart":true,
+    "tablecoverimage":"code"
+  }
+]
+
+}

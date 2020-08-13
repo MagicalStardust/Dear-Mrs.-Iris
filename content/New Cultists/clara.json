@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqclara",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"clara_a",
+    "icon":"clara",
+    "label":"Clara, an acquaintance",
+    "description": "Clara moves with confidence. She starts to open up like a scar, revealing her occult origins. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "clara_b"},
+    "uniquenessgroup": "uqclara"
+  },
+  {
+    "id":"clara_b",
+    "icon":"clara",
+    "label":"Clara, a believer",
+    "description": "Clara moves with confidence. She starts to open up like a scar, revealing her occult origins.",
+    "aspects": {"follower":1, "mortal":1, "lantern":2},
+    "xtriggers": {"capturefollower": "clara_p", "rebellion": "clara_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "clara_c"},
+    "uniquenessgroup": "uqclara"
+  },
+  {
+    "id":"clara_c",
+    "icon":"clara",
+    "label":"Clara, a disciple",
+    "description": "Clara has many scars on her body which, according to herself, open her eyes more.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "lantern":5},
+    "xtriggers": {"capturefollower": "clara_p", "rebellion": "clara_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_lantern": "clara_d"},
+    "uniquenessgroup": "uqclara"
+  },
+  {
+    "id":"clara_d",
+    "icon":"clara",
+    "label":"Clara, a Seer",
+    "description": "Clara ocassionally asks if we want to see her eyes. It is wise to refuse.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "lantern":10},
+    "xtriggers": {"capturefollower": "clara_p", "rebellion": "clara_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqclara"
+  },
+  {
+    "id":"clara_r",
+    "icon":"clara",
+    "label":"Clara, a Troublemaker",
+    "description": "Clara sees a new path for herself.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "clara_b", "rival_promotion": "clara_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqclara"
+  },
+  {
+    "id":"clara_r_c",
+    "icon":"clara",
+    "label":"Clara, a Rival",
+    "description": "Although she can't see, we have the feeling that Clara is always watching us.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "clara_c", "rival_promotion": "clara_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqclara"
+  },
+  {
+    "id":"clara_r_d",
+    "icon":"clara",
+    "label":"Clara, a Long in the Making",
+    "description": "'They'll never suspect a poor, blind girl. That's what makes this all so easy.'",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "clara_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqclara"
+  },
+  {
+    "id":"clara_p",
+    "icon":"clara",
+    "label":"Clara, a Prisoner",
+    "description": "Clara stares at the ceiling for hours. We have no idea what she sees or doesn't see in it.",
+    "aspects": {"prisoner": 1, "heart": 3, "lantern": 3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqclara"
+  }
+]
+
+}

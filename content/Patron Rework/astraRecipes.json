@@ -1,0 +1,133 @@
+{
+"recipes": [
+  {
+    "id": "getcommissionastra",
+    "label": "Get a Commission from Astra Merrill",
+    "startdescription": "[desc here]",
+    "description": "Here's what he needs.",
+    "actionId": "talk",
+    "requirements": {"astraready": 1, "gratitude": -1},
+    "aspects": {"commissiongiven": 1},
+    "warmup": 10,
+    "deckeffects": {"astracommissions": 1},
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionastralantern",
+    "label": "Fulfill a Commission for Astra Merrill",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with the scientist. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticlelantern": 1, "astra": 1, "article": 1, "lantern": 2},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionastralanternb",
+    "label": "Fulfill a Commission for Astra Merrill",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with the scientist. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticlelanternb": 1, "astra": 1, "article": 1, "lantern": 4},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionastralanternc",
+    "label": "Fulfill a Commission for Astra Merrill",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with the scientist. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticlelanternc": 1, "astra": 1, "article": 1, "lantern": 6},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "talk_astra_wantscommission",
+    "label": "A Commission?",
+    "startdescription": "Good day. Is the commission going to be long yet?",
+    "actionId": "talk",
+    "requirements": {"astra": 1},
+    "craftable": true,
+    "hintonly": true
+  },
+
+  {
+    "id": "fulfilcommissionastramoth",
+    "label": "Fulfill a Commission for Astra Merrill",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with the scientist. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticlemoth": 1, "astra": 1, "article": 1, "moth": 2},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionastramothb",
+    "label": "Fulfill a Commission for Astra Merrill",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with the scientist. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticlemothb": 1, "astra": 1, "article": 1, "moth": 4},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+  {
+    "id": "fulfilcommissionastramothc",
+    "label": "Fulfill a Commission for Astra Merrill",
+    "startdescription": "I have what was requested.",
+    "description": "I've increased my favour with the scientist. Perhaps in time I will reap the dividends of this friendship.",
+    "actionId": "talk",
+    "requirements": {"commissionarticlemothc": 1, "astra": 1, "article": 1, "moth": 6},
+    "effects": {"mystique": 1, "article": -1, "erudition": 1},
+    "aspects": {"commissionfulfilled": 1},
+    "warmup": 10,
+    "craftable": true
+  },
+
+  {
+    "id": "get_giftastraa",
+    "label": "Call on a small favour from the scientist.",
+    "startdescription": "A payment.",
+    "description": "A payment.",
+    "actionId": "talk",
+    "requirements": {"gratitude": -2, "astraready": 1},
+    "deckeffects": {"astrarewardsa": 1},
+    "warmup": 30,
+    "craftable": true
+  },
+  {
+    "id": "get_giftastrab",
+    "label": "Call on a large favour from the scientist.",
+    "startdescription": "A payment.",
+    "description": "A payment.",
+    "actionId": "talk",
+    "requirements": {"gratitude": -3, "astraready": 1},
+    "deckeffects": {"astrarewardsb": 1},
+    "warmup": 30,
+    "craftable": true
+  },
+  {
+    "id": "get_giftastrac",
+    "label": "Call on a substantial favour from the scientist.",
+    "startdescription": "A payment.",
+    "description": "A payment.",
+    "actionId": "talk",
+    "requirements": {"gratitude": 3, "astraready": 1},
+    "deckeffects": {"astrarewardsc": 1},
+    "warmup": 30,
+    "craftable": true
+  }
+
+]
+}

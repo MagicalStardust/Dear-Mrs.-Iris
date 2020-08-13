@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqmaria",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"maria_a",
+    "icon":"maria",
+    "label":"Maria, an acquaintance",
+    "description": "A flowerseller from the Continent. She claims to know no types of ivy, but three sorts of poppy. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "maria_b"},
+    "uniquenessgroup": "uqmaria"
+  },
+  {
+    "id":"maria_b",
+    "icon":"maria",
+    "label":"Maria, a believer",
+    "description": "Maria Pünktel has taken another interest in the occult. She swears it's only whimsy that drives her.",
+    "aspects": {"follower":1, "mortal":1, "moth":2},
+    "xtriggers": {"capturefollower": "maria_p", "rebellion": "maria_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "maria_c"},
+    "uniquenessgroup": "uqmaria"
+  },
+  {
+    "id":"maria_c",
+    "icon":"maria",
+    "label":"Maria, a disciple",
+    "description": "She knows the Forests of the Continent better than the pines and the moles.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "moth":5},
+    "xtriggers": {"capturefollower": "maria_p", "rebellion": "maria_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_moth": "maria_d"},
+    "uniquenessgroup": "uqmaria"
+  },
+  {
+    "id":"maria_d",
+    "icon":"maria",
+    "label":"Maria, a Skintwister",
+    "description": "The Pact has made her words somewhat less coherent, but the plants are eager to listen still.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "moth":10},
+    "xtriggers": {"capturefollower": "maria_p", "rebellion": "maria_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmaria"
+  },
+  {
+    "id":"maria_r",
+    "icon":"maria",
+    "label":"Maria, a Troublemaker",
+    "description": "A flowerseller with an interest in immortality.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "maria_b", "rival_promotion": "maria_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmaria"
+  },
+  {
+    "id":"maria_r_c",
+    "icon":"maria",
+    "label":"Maria, a Rival",
+    "description": "She would like to play hide and seek, she informs us. Enclosed in her letter is a cheap sundial with no numbers but zero.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "maria_c", "rival_promotion": "maria_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmaria"
+  },
+  {
+    "id":"maria_r_d",
+    "icon":"maria",
+    "label":"Maria, a Long in the Making",
+    "description": "'I suggest you try tea of water hemlock and devil's cherry. It may ease your next few days.'",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "maria_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqmaria"
+  },
+  {
+    "id":"maria_p",
+    "icon":"maria",
+    "label":"Maria, a Prisoner",
+    "description": "She needs no restraints. It reminds her of childhood, she says.",
+    "aspects": {"prisoner": 1, "moth": 5, "heart": 3, "grail":3, "lantern":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqmaria"
+  }
+]
+
+}

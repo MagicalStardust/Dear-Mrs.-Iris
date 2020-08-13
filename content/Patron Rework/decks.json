@@ -1,0 +1,124 @@
+{
+"decks": [
+  {
+    "id":"scholarpatrons",
+    "label":"Patrons",
+    "description":"Those who might help me.",
+    "spec":["beekready","harrisready","williamready","viktorready","astraready"],
+    "defaultcard":"rumour"
+  },
+  {
+    "id": "beekcommissions",
+    "label": "Beek's Interests",
+    "spec": ["commissionarticleforge","commissionarticleforgeb","commissionarticleforgec"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "beekfollowersa",
+    "label": "Beek's Rewards",
+    "spec": ["thugedgeminor", "thugedgeminor", "thugedgeminor", "thugmothminor", "thugmothminor"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "beekfollowersb",
+    "label": "Beek's Rewards",
+    "spec": ["thugedge", "thugforgeedge", "thugknock", "thuglanternmoth", "thugmoth"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "beekfollowersc",
+    "label": "Beek's Rewards",
+    "spec": ["elvi", "jacob", "june"],
+    "resetonexhaustion": false,
+    "defaultcard": "thugedge"
+  },
+
+
+  {
+    "id": "harriscommissions",
+    "label": "Harris' Interests",
+    "spec": ["commissionarticleedge","commissionarticleedgeb","commissionarticleedgec",
+             "commissionarticleheart","commissionarticleheartb","commissionarticleheartc"],
+    "resetonexhaustion": true
+  },
+
+
+  {
+    "id": "williamcommissions",
+    "label": "Jericho's Interests",
+    "spec": ["commissionarticlesecrethistories","commissionarticlesecrethistoriesb","commissionarticlesecrethistoriesc"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "williamrewardsa",
+    "label": "Jericho's Rewards",
+    "spec": ["erudition", "erudition", "erudition", "glimmering", "glimmering"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "williamrewardsb",
+    "label": "Jericho's Rewards",
+    "spec": ["eruditionplus", "eruditionplus", "eruditionplus", "eruditionplus", "glimmeringplus", "glimmeringplus"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "williamrewardsc",
+    "label": "Jericho's Rewards",
+    "spec": ["textbookreason", "textbookreason", "textbookreason", "textbookpassion", "textbookpassion", "textbookpassion"],
+    "resetonexhaustion": true
+  },
+
+  {
+    "id": "viktorcommissions",
+    "label": "Viktor's Interests",
+    "spec": ["commissionarticlewinter","commissionarticlewinterb","commissionarticlewinterc",
+             "commissionarticlegrail","commissionarticlegrailb","commissionarticlegrailc"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "viktorrewardsa",
+    "label": "Viktor's Rewards",
+    "spec": ["compensation","compensation","compensation","compensation","compensation","compensation","compensation","compensationb","compensationb"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "viktorrewardsb",
+    "label": "Viktor's Rewards",
+    "spec": ["compensation","compensationb","compensationb","compensationb","compensationb","compensationb","compensationb","compensationc"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "viktorrewardsc",
+    "label": "Viktor's Rewards",
+    "spec": ["compensationc","compensationc","compensationc","compensationc","compensationc","compensationc","compensationc","compensationc","compensationc","compensationd"],
+    "resetonexhaustion": true
+  },
+
+  {
+    "id": "astracommissions",
+    "label": "Astra's Interests",
+    "spec": ["commissionarticlewinter","commissionarticlewinterb","commissionarticlewinterc",
+             "commissionarticlegrail","commissionarticlegrailb","commissionarticlegrailc"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "astrarewardsa",
+    "label": "Astra's Rewards",
+    "spec": ["compensation"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "astrarewardsb",
+    "label": "Astra's Rewards",
+    "spec": ["compensation"],
+    "resetonexhaustion": true
+  },
+  {
+    "id": "astrarewardsc",
+    "label": "Astra's Rewards",
+    "spec": ["compensationc"],
+    "resetonexhaustion": true
+  }
+]
+
+}

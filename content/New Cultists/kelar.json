@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqkelar",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"kelar_a",
+    "icon":"kelar",
+    "label":"Kelar, an acquaintance",
+    "description": "A forger of documentation, running out of options. We could provide some. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "kelar_b"},
+    "uniquenessgroup": "uqkelar"
+  },
+  {
+    "id":"kelar_b",
+    "icon":"kelar",
+    "label":"Kelar, a believer",
+    "description": "He comes from abroad, apparently. One day, he says, he'd like to return to his mother.",
+    "aspects": {"follower":1, "mortal":1, "moth":2},
+    "xtriggers": {"capturefollower": "kelar_p", "rebellion": "kelar_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "kelar_c"},
+    "uniquenessgroup": "uqkelar"
+  },
+  {
+    "id":"kelar_c",
+    "icon":"kelar",
+    "label":"Kelar, a disciple",
+    "description": "Jacob's forgeries grow harder to discern daily. He stopped talking about his mother.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "moth":5},
+    "xtriggers": {"capturefollower": "kelar_p", "rebellion": "kelar_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_moth": "kelar_d"},
+    "uniquenessgroup": "uqkelar"
+  },
+  {
+    "id":"kelar_d",
+    "icon":"kelar",
+    "label":"Kelar, a Skintwister",
+    "description": "Every time we meet, we see someone new. We assume it's Kelar, and we're usually right.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "moth":10},
+    "xtriggers": {"capturefollower": "kelar_p", "rebellion": "kelar_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqkelar"
+  },
+  {
+    "id":"kelar_r",
+    "icon":"kelar",
+    "label":"Kelar, a Troublemaker",
+    "description": "Occasionally, someone strange listens in on our meetings.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "kelar_b", "rival_promotion": "kelar_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqkelar"
+  },
+  {
+    "id":"kelar_r_c",
+    "icon":"kelar",
+    "label":"Kelar, a Rival",
+    "description": "When we finally think we have him found, he moves location, consistently.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "kelar_c", "rival_promotion": "kelar_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqkelar"
+  },
+  {
+    "id":"kelar_r_d",
+    "icon":"kelar",
+    "label":"Kelar, a Long in the Making",
+    "description": "We no longer try to track him down anymore. We can't afford searching every person for a scrap of evidence.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "kelar_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqkelar"
+  },
+  {
+    "id":"kelar_p",
+    "icon":"kelar",
+    "label":"Kelar, a Prisoner",
+    "description": "He asks us to at least keep helping his mother, as he was. None of us have listened so far.",
+    "aspects": {"prisoner": 1, "moth": 5, "heart": 3, "grail":3, "lantern":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqkelar"
+  }
+]
+
+}

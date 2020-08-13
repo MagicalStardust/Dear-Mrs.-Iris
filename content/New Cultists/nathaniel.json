@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqnathaniel",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"nathaniel_a",
+    "icon":"nathaniel",
+    "label":"Nathaniel, an acquaintance",
+    "description": "Nathaniel used to be an artist, before his sight got cloudy. He still has his other senses. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"follower_lustsensation":1, "acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "nathaniel_b"},
+    "uniquenessgroup": "uqnathaniel"
+  },
+  {
+    "id":"nathaniel_b",
+    "icon":"nathaniel",
+    "label":"Nathaniel, a believer",
+    "description": "Nathaniel knows what to say, how to gesture, and where to look.",
+    "aspects": {"follower_lustsensation":1, "follower":1, "mortal":1, "grail":2},
+    "xtriggers": {"capturefollower": "nathaniel_p", "rebellion": "nathaniel_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "nathaniel_c"},
+    "uniquenessgroup": "uqnathaniel"
+  },
+  {
+    "id":"nathaniel_c",
+    "icon":"nathaniel",
+    "label":"Nathaniel, a disciple",
+    "description": "He's never seen without that little smile on his face. Never.",
+    "aspects": {"potential": 1, "follower_lustsensation":1, "disciple": 1, "follower":1, "mortal":1, "grail":5},
+    "xtriggers": {"capturefollower": "nathaniel_p", "rebellion": "nathaniel_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_grail": "nathaniel_d"},
+    "uniquenessgroup": "uqnathaniel"
+  },
+  {
+    "id":"nathaniel_d",
+    "icon":"nathaniel",
+    "label":"Nathaniel, a Cyprian",
+    "description": "He covers himself a lot, now. But it serves him well. His targets lose themselves by the time he takes off his coat.",
+    "aspects": {"exalted": 1, "follower_lustsensation":1, "disciple": 1, "follower":1, "mortal":1, "grail":10},
+    "xtriggers": {"capturefollower": "nathaniel_p", "rebellion": "nathaniel_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqnathaniel"
+  },
+  {
+    "id":"nathaniel_r",
+    "icon":"nathaniel",
+    "label":"Nathaniel, a Troublemaker",
+    "description": "Nathaniel is not quite satisfied.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "nathaniel_b", "rival_promotion": "nathaniel_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqnathaniel"
+  },
+  {
+    "id":"nathaniel_r_c",
+    "icon":"nathaniel",
+    "label":"Nathaniel, a Rival",
+    "description": "Nathaniel is courteous to everyone but his meals.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "nathaniel_c", "rival_promotion": "nathaniel_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqnathaniel"
+  },
+  {
+    "id":"nathaniel_r_d",
+    "icon":"nathaniel",
+    "label":"Nathaniel, a Long in the Making",
+    "description": "His kiss tastes like cinnamon and mint. Then, it tastes like bitter almonds.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "nathaniel_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqnathaniel"
+  },
+  {
+    "id":"nathaniel_p",
+    "icon":"nathaniel",
+    "label":"Nathaniel, a Prisoner",
+    "description": "He doesn't struggle against his bounds in any meaningful way.",
+    "aspects": {"prisoner": 1, "grail": 5, "heart": 3, "lantern": 3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqnathaniel"
+  }
+]
+
+}

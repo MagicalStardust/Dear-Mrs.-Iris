@@ -1,0 +1,204 @@
+{
+
+"elements": [
+  {
+    "id": "viktorgratitude",
+    "icon":"viktora",
+    "label": "Viktor's Gratitude [Minor]",
+    "description": "I have earned the favour of the painter and aristocrat. [Use this to receive assistance from Viktor Learte]",
+    "aspects": {"gratitude": 1}
+  },
+  {
+    "id": "viktorgratitudeb",
+    "icon":"viktorb",
+    "label": "Viktor's Gratitude [Major]",
+    "description": "I have earned the favour of the painter and aristocrat. [Use this to receive assistance from Viktor Learte]",
+    "aspects": {"gratitude": 2}
+  },
+  {
+    "id": "viktorgratitudec",
+    "icon":"viktorc",
+    "label": "Viktor's Gratitude [Substantial]",
+    "description": "I have earned the favour of the painter and aristocrat. [Use this to receive assistance from Viktor Learte]",
+    "aspects": {"gratitude": 3}
+  },
+  {
+    "id": "viktorready",
+    "icon":"viktor",
+    "label": "Viktor Learte",
+    "description": "Viktor Learte is the heir to a considerable fortune and has every earthly pleasure at his disposal. He's looking for something more.",
+    "aspects": {"patron":1, "mortal":1},
+    "xtriggers": {"commissiongiven":"viktor"},
+    "slots":
+    [
+      {
+        "id": "Gratitude",
+        "actionId": "talk",
+        "required": {"gratitude": 1},
+        "consumes": true
+      }
+    ],
+    "unique": true,
+
+  },
+  {
+    "id": "viktor",
+    "icon":"viktor",
+    "label": "Viktor Learte",
+    "description": "Viktor Learte is the heir to a considerable fortune and has every earthly pleasure at his disposal. He has offered you a commission.",
+    "aspects": {"gangleader": 1, "patron":1},
+    "slots":
+    [
+      {
+        "id": "Commission",
+        "actionId": "talk",
+        "required": {"commission": 1}
+      },
+      {
+        "id": "Manuscript",
+        "actionId": "talk",
+        "required": {"article": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled":"viktoraway"},
+    "unique": true
+  },
+  {
+    "id": "viktoraway",
+    "icon":"viktor",
+    "label": "Dr. Harris",
+    "description": "Viktor Learte is the heir to a considerable fortune and has every earthly pleasure at his disposal. He's indisposable right now, but he'll be back.",
+    "lifetime": 120,
+    "decayTo": "viktorready",
+    "unique": true
+  },
+  {
+    "id": "commissionarticlewinter",
+    "icon": "commissionarticlewinter",
+    "label": "Commission: Winter",
+    "description": "[You'll need a matching Lore fragment of at least level 2 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "viktorgratitude"}
+  },
+  {
+    "id": "commissionarticlewinterb",
+    "icon": "commissionarticlewinterb",
+    "label": "Commission: Winter (Substantial)",
+    "description": "[You'll need a matching Lore fragment of at least level 4 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "viktorgratitudeb"}
+  },
+  {
+    "id": "commissionarticlewinterc",
+    "icon": "commissionarticlewinterc",
+    "label": "Commission: Winter (Very Substantial)",
+    "description": "[You'll need a matching Lore fragment of at least level 6 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "viktorgratitudec"}
+  },
+
+
+  {
+    "id": "commissionarticlegrail",
+    "icon": "commissionarticlegrail",
+    "label": "Commission: Grail",
+    "description": "[You'll need a matching Lore fragment of at least level 2 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "viktorgratitude"}
+  },
+  {
+    "id": "commissionarticlegrailb",
+    "icon": "commissionarticlegrailb",
+    "label": "Commission: Grail (Substantial)",
+    "description": "[You'll need a matching Lore fragment of at least level 4 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "viktorgratitudeb"}
+  },
+  {
+    "id": "commissionarticlegrailc",
+    "icon": "commissionarticlegrailc",
+    "label": "Commission: Grail (Very Substantial)",
+    "description": "[You'll need a matching Lore fragment of at least level 6 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "viktorgratitudec"}
+  },
+  ]
+}

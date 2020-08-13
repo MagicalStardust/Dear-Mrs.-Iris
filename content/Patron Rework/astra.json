@@ -1,0 +1,204 @@
+{
+
+"elements": [
+  {
+    "id": "astragratitude",
+    "icon":"astraa",
+    "label": "Viktor's Gratitude [Minor]",
+    "description": "I have earned the favour of the painter and aristocrat. [Use this to receive assistance from Astra Merrill]",
+    "aspects": {"gratitude": 1}
+  },
+  {
+    "id": "astragratitudeb",
+    "icon":"astrab",
+    "label": "Viktor's Gratitude [Major]",
+    "description": "I have earned the favour of the painter and aristocrat. [Use this to receive assistance from Astra Merrill]",
+    "aspects": {"gratitude": 2}
+  },
+  {
+    "id": "astragratitudec",
+    "icon":"astrac",
+    "label": "Viktor's Gratitude [Substantial]",
+    "description": "I have earned the favour of the painter and aristocrat. [Use this to receive assistance from Astra Merrill]",
+    "aspects": {"gratitude": 3}
+  },
+  {
+    "id": "astraready",
+    "icon":"astra",
+    "label": "Astra Merrill",
+    "description": "[Desc here]",
+    "aspects": {"patron":1, "mortal":1},
+    "xtriggers": {"commissiongiven":"astra"},
+    "slots":
+    [
+      {
+        "id": "Gratitude",
+        "actionId": "talk",
+        "required": {"gratitude": 1},
+        "consumes": true
+      }
+    ],
+    "unique": true,
+
+  },
+  {
+    "id": "astra",
+    "icon":"astra",
+    "label": "Astra Merrill",
+    "description": "[Desc here]",
+    "aspects": {"gangleader": 1, "patron":1},
+    "slots":
+    [
+      {
+        "id": "Commission",
+        "actionId": "talk",
+        "required": {"commission": 1}
+      },
+      {
+        "id": "Manuscript",
+        "actionId": "talk",
+        "required": {"article": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled":"astraaway"},
+    "unique": true
+  },
+  {
+    "id": "astraaway",
+    "icon":"astra",
+    "label": "Astra Merrill",
+    "description": "[Desc here]",
+    "lifetime": 120,
+    "decayTo": "astraready",
+    "unique": true
+  },
+  {
+    "id": "commissionarticlelantern",
+    "icon": "commissionarticlelantern",
+    "label": "Commission: Lantern",
+    "description": "[You'll need a matching Lore fragment of at least level 2 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "astragratitude"}
+  },
+  {
+    "id": "commissionarticlelanternb",
+    "icon": "commissionarticlelanternb",
+    "label": "Commission: Lantern (Substantial)",
+    "description": "[You'll need a matching Lore fragment of at least level 4 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "astragratitudeb"}
+  },
+  {
+    "id": "commissionarticlelanternc",
+    "icon": "commissionarticlelanternc",
+    "label": "Commission: Lantern (Very Substantial)",
+    "description": "[You'll need a matching Lore fragment of at least level 6 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "astragratitudec"}
+  },
+
+
+  {
+    "id": "commissionarticlemoth",
+    "icon": "commissionarticlemoth",
+    "label": "Commission: Moth",
+    "description": "[You'll need a matching Lore fragment of at least level 2 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "astragratitude"}
+  },
+  {
+    "id": "commissionarticlemothb",
+    "icon": "commissionarticlemothb",
+    "label": "Commission: Moth (Substantial)",
+    "description": "[You'll need a matching Lore fragment of at least level 4 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "astragratitudeb"}
+  },
+  {
+    "id": "commissionarticlemothc",
+    "icon": "commissionarticlemothc",
+    "label": "Commission: Moth (Very Substantial)",
+    "description": "[You'll need a matching Lore fragment of at least level 6 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "astragratitudec"}
+  },
+  ]
+}

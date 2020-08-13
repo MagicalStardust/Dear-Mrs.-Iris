@@ -1,0 +1,92 @@
+{
+"elements":
+[
+  {
+    "id":"uqodette",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"odette_a",
+    "icon":"odetted",
+    "label":"Odette, an acquaintance",
+    "description": "This woman of striking beauty used to be a danseuse, before a tragic accident shattered her world. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"follower_lustsensation":1, "acquaintance":1, "mortal":1, "squarrel": 1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "odette_b"},
+    "uniquenessgroup": "uqodette"
+  },
+  {
+    "id":"odette_b",
+    "icon":"odetted",
+    "label":"Odette, a believer",
+    "description": "Her loyalties are hard to earn, yet she claims that they are eternal. We have no wish to discover what awaits us at that particular ending.",
+    "aspects": { "follower_lustsensation":1, "follower":1, "mortal":1, "winter":2, "squarrel": 1},
+    "xtriggers": {"capturefollower": "odette_p", "rebellion": "odette_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "odette_c"},
+    "uniquenessgroup": "uqodette"
+  },
+  {
+    "id":"odette_c",
+    "icon":"odetted",
+    "label":"Odette, a disciple",
+    "description": "Odette doesn't speak often, preferring instead the language of her sedentary body. Her every permitted motion is a rare memory of a pirouette.",
+    "aspects": {"potential": 1, "follower_lustsensation":1, "disciple": 1, "follower":1, "mortal":1, "winter":5, "squarrel": 1},
+    "xtriggers": {"capturefollower": "odette_p", "rebellion": "odette_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_winter": "odette_d"},
+    "uniquenessgroup": "uqodette"
+  },
+  {
+    "id":"odette_d",
+    "icon":"odetted",
+    "label":"A beautiful woman, who is silent",
+    "description": "Odette's little movements reached their conclusion, and sometimes we mistake her for an enthroned ivory statue, likes of which have never blessed this world before.",
+    "aspects": {"exalted": 1, "follower_lustsensation":1, "disciple": 1, "follower":1, "mortal":1, "winter":10, "squarrel": 1},
+    "xtriggers": {"capturefollower": "odette_p", "rebellion": "odette_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqodette"
+  },
+  {
+    "id":"odette_r",
+    "icon":"odetted",
+    "label":"Odette, a Troublemaker",
+    "description": "Odette will allow this one beginning.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1, "squarrel": 1},
+    "xtriggers": {"recruiting": "odette_b", "rival_promotion": "odette_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqodette"
+  },
+  {
+    "id":"odette_r_c",
+    "icon":"odetted",
+    "label":"Odette, a Rival",
+    "description": "Odette understands her sister, now, she thinks. She may yet forgive her, too.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1, "squarrel": 1},
+    "xtriggers": {"recruiting": "odette_c", "rival_promotion": "odette_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqodette"
+  },
+  {
+    "id":"odette_r_d",
+    "icon":"odetted",
+    "label":"Odette, a Long in the Making",
+    "description": "Odette is ready to take a plunge into the icy depths of death, and return from them victorious. That finale is not to our taste.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1, "squarrel": 1},
+    "xtriggers": {"recruiting": "odette_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqodette"
+  },
+  {
+    "id":"odette_p",
+    "icon":"odetted",
+    "label":"Odette, a Prisoner",
+    "description": "She is silent as a white feather brushed against the purest snow.",
+    "aspects": {"prisoner": 1, "winter": 5, "heart": 3, "lantern": 3, "grail":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqodette"
+  },
+  {
+    "id":"squarrel",
+    "icon":"quarrel",
+    "label":"Sisterly Quarrel",
+    "description":"A tragic event tore these siblings apart like a ship in a storm. The wound is not mended easily. But perhaps we can try. [Quarreling followers are likely to impede each other on expeditions, and may become Resentful towards you. But perhaps the quarrel can be resolved].",
+    "isAspect": true
+  }
+]
+
+}

@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqclaire",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"claire_a",
+    "icon":"claire",
+    "label":"Claire, an acquaintance",
+    "description": "Claire Hatchston was recently fired from her decade-long job. Although her spirits are up, she still wants to know how to protect against that which made her leave. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "claire_b"},
+    "uniquenessgroup": "uqclaire"
+  },
+  {
+    "id":"claire_b",
+    "icon":"claire",
+    "label":"Claire, a believer",
+    "description": "Claire hugs everyone she considers a friend, and does not shirk from asking questions to those she doesn't.",
+    "aspects": {"follower":1, "mortal":1, "heart":2},
+    "xtriggers": {"capturefollower": "claire_p", "rebellion": "claire_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "claire_c"},
+    "uniquenessgroup": "uqclaire"
+  },
+  {
+    "id":"claire_c",
+    "icon":"claire",
+    "label":"Claire, a disciple",
+    "description": "Claire is becoming increasingly preoccupied with the concept of protection. She will find out how to defend her allies.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "heart":5},
+    "xtriggers": {"capturefollower": "claire_p", "rebellion": "claire_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_heart": "claire_d"},
+    "uniquenessgroup": "uqclaire"
+  },
+  {
+    "id":"claire_d",
+    "icon":"claire",
+    "label":"Claire, a Tarantellist",
+    "description": "Claire serenades us often now. When she doesn't, she hums. That's when she is quieter, but somehow that's when we hear her even better.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "heart":10},
+    "xtriggers": {"capturefollower": "claire_p", "rebellion": "claire_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqclaire"
+  },
+  {
+    "id":"claire_r",
+    "icon":"claire",
+    "label":"Claire, a Troublemaker",
+    "description": "Claire is distrusting of us.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "claire_b", "rival_promotion": "claire_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqclaire"
+  },
+  {
+    "id":"claire_r_c",
+    "icon":"claire",
+    "label":"Claire, a Rival",
+    "description": "Claire is often seen around town, and it's not easy to say anything against her. She holds no such qualms against us.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "claire_c", "rival_promotion": "claire_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqclaire"
+  },
+  {
+    "id":"claire_r_d",
+    "icon":"claire",
+    "label":"Claire, a Long in the Making",
+    "description": "Don't worry, munchkin. I'll see to it,' she promises, lovingly, 'that the Bureau treats you nicely. But they will treat you.'",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "claire_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqclaire"
+  },
+  {
+    "id":"claire_p",
+    "icon":"claire",
+    "label":"Claire, a Prisoner",
+    "description": "Claire has a way of extracting information, and we don't know how she will use it. Best just not to talk to her.",
+    "aspects": {"prisoner": 1, "heart": 5, "lantern": 3, "grail":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqclaire"
+  }
+]
+
+}

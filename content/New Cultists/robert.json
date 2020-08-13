@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqrobert",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"robert_a",
+    "icon":"robert",
+    "label":"Robert, an acquaintance",
+    "description": "Robert is an unyielding, unblinking, unremitting veteran of the Great War. Its passing left wounds on his body and spirit, some still open, some still aching. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "robert_b"},
+    "uniquenessgroup": "uqrobert"
+  },
+  {
+    "id":"robert_b",
+    "icon":"robert",
+    "label":"Robert, a believer",
+    "description": "All scars hold power, and Robert has many scars. He will put them to necessary use.",
+    "aspects": {"follower":1, "mortal":1, "winter":2},
+    "xtriggers": {"capturefollower": "robert_p", "rebellion": "robert_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "robert_c"},
+    "uniquenessgroup": "uqrobert"
+  },
+  {
+    "id":"robert_c",
+    "icon":"robert",
+    "label":"Robert, a disciple",
+    "description": "Robert chooses the time for his words, his naps, and his meals very, very carefully. He is still reluctant when it comes to our work: he has seen and done enough. But his hand does not falter.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "winter":5},
+    "xtriggers": {"capturefollower": "robert_p", "rebellion": "robert_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_winter": "robert_d"},
+    "uniquenessgroup": "uqrobert"
+  },
+  {
+    "id":"robert_d",
+    "icon":"robert",
+    "label":"A glum man, who is silent",
+    "description": "The quiet is deafening. The chill is lingering. And when the time has come, it bites.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "winter":10},
+    "xtriggers": {"capturefollower": "robert_p", "rebellion": "robert_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqrobert"
+  },
+  {
+    "id":"robert_r",
+    "icon":"robert",
+    "label":"Robert, a Troublemaker",
+    "description": "",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "robert_b", "rival_promotion": "robert_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqrobert"
+  },
+  {
+    "id":"robert_r_c",
+    "icon":"robert",
+    "label":"Robert, a Rival",
+    "description": "",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "robert_c", "rival_promotion": "robert_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqrobert"
+  },
+  {
+    "id":"robert_r_d",
+    "icon":"robert",
+    "label":"Robert, a Long in the Making",
+    "description": "",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "robert_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqrobert"
+  },
+  {
+    "id":"robert_p",
+    "icon":"robert",
+    "label":"Robert, a Prisoner",
+    "description": "It's hard to tell if Robert is still breathing without getting closer. Perhaps this is exactly what he wants.",
+    "aspects": {"prisoner": 1, "winter": 5, "heart": 3, "lantern": 3, "grail":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqrobert"
+  }
+]
+
+}

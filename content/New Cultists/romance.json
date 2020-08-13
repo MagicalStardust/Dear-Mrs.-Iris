@@ -1,0 +1,188 @@
+{
+"recipes":
+[
+  {
+    "id":"A_talktofollower_locationcabaret_lustsensation",
+    "extends":["A_talktofollower_locationcabaret_lustsensation"],
+    "startdescription":"@#uqnathaniel|For a moment, he does not say anything. His mouth opens for a few seconds before he speaks. 'I have been there sometimes. Did anything change?' #uqmarco|'Ah, <i>une nuit de vues et de sons?</i> I would be delighted to come.'@"
+  },
+  {
+    "id":"A_startrose_sensation_initiate",
+    "extends":["A_startrose_sensation_initiate"],
+    "startdescription":"@#uqnathaniel|Nathaniel stares upwards, at the roof of the building. 'It feels...' he starts, 'as if... these aromas are stronger near you.' He turns to me. 'Is this your doing?' His smile widens. #uqmarco|Marco squints his eyes at the dancers on stage, envisioning how best they would fit into a frame. Eventually, however, he begins to contemplate me. 'You are impossible,' he laughs. 'There is no one angle of you more picturesque than another.'@"
+  },
+  {
+    "id":"A_continuerose_sensation_success",
+    "extends":["A_continuerose_sensation_success"],
+    "startdescription":"@#uqnathaniel|Nathaniel is very gentle, allows me charge. The concave and convex interact, but they don't annihilate eachother. They are enhanced, until both our sights are equally clouded. #uqmarco|Last night, I was in the kingdom of shadows. Marco and I roost in the box seats above, watching figures flicker on canvases of light and recite gramophone-grainy confessions. Afterwards, we enjoy our talks and our critiques, and after that, we enjoy each other.@"
+  },
+
+
+  {
+    "id":"A_talktofollower_locationstreetsstrange_lustenlightenment",
+    "extends":["A_talktofollower_locationstreetsstrange_lustenlightenment"],
+    "startdescription":"@#uqotto|'Just a moment - have to feed this one before we go… and done. Let’s, yes?'@"
+  },
+  {
+    "id":"A_startrose_enlightenment_initiate",
+    "extends":["A_startrose_enlightenment_initiate"],
+    "startdescription":"@#uqotto|His fingers encircle mine. A warmth passes from me to him. The streets wind and twist ahead of us, but Otto is astute enough to help me find the way back to his home. He says nothing as he reaches for the key, but the looks he’d been giving me as we strolled were answers enough.@"
+  },
+  {
+    "id":"A_continuerose_enlightenment_success",
+    "extends":["A_continuerose_enlightenment_success"],
+    "startdescription":"@#uqotto|His love is an inexplicable kind of poison. I am opened - my body; my blood - and he enters me. When we finish, Otto is knotted at my side, and I warm him within and without until the Sun finds us again.@"
+  },
+
+
+
+  {
+    "id":"A_talktofollower_locationauctionhouse_lustpower",
+    "extends":["A_talktofollower_locationauctionhouse_lustpower"],
+    "startdescription":"@#uqmonica|A sly smirk appears across Monica's face. 'I've heard such a proposition many times before. At least you're not like the one who tried to take me to a cabaret. Let us go.' #uqedgar|A conspiratorial grin forms on Edgar’s face. 'That makes sense', he laughs.@"
+  },
+  {
+    "id":"A_startrose_power_initiate",
+    "extends":["A_startrose_power_initiate"],
+    "startdescription":"@#uqmonica|Monica bids for every single blade that appears on the auction, and wins three. 'Didn't I mention that I have a collection?' Her smile is sharp and focused. 'You should come over some time so I can show you.' #uqedgar|Edgar and I listen to the bidders duel as evening waxes to a sleeker darkness. At some point, he makes a great show of yawning to the annoyance of those in the room, but drapes his arm around me while he does. It does not leave for the rest of the night.@"
+  },
+  {
+    "id":"A_continuerose_power_success",
+    "extends":["A_continuerose_power_success"],
+    "startdescription":"@#uqmonica|Monica is passionate, but strict. Caring, but assertive. By the time we're done I lay exhausted, and she idly runs a hand across my chest. 'Not bad. Not bad at all.' #uqedgar|Edgar operates like a well-oiled machine, and makes sure I can appreciate that. He is a dragon coiled sweetly at my foot, fiery in both his affections and his expressions of them.@"
+  },
+
+
+
+  {
+    "id":"A_talktofollower_locationcabaret_lustchange",
+    "extends":["A_talktofollower_locationcabaret_lustchange"],
+    "startdescription":"@#uqcharity|'The Ecdysis? I used to perform there.' A sly smirk crosses Charity's lips. 'Maybe they'll let me dance on stage again, as a favour.'
+                         #uqodette|Odette's eyes are like snow globes, and my question is not met with an answer, until at last, she smiles softly. 'It's been a while since I last saw the stage. Why not?'@"
+  },
+  {
+    "id":"A_startrose_change_initiate",
+    "extends":["A_startrose_change_initiate"],
+    "startdescription":"@#uqcharity|Charity seems more fixated on me than on the performances. She takes my hand halfway through and whispers in my ear. 'How about we take a private room? I'll show you a couple of dance moves of my own.'
+                         #uqodette|Odette watches the performance in silence, but every now and then, I notice her fingers moving ever so slightly to the rhythm. 'Thank you for bringing me here. You know, I used to dance the most when I was sorrowful,' she tells me, and then she takes my face into her hands, and shows me just how well she knew the dance. #@"
+  },
+  {
+    "id":"A_continuerose_change_success",
+    "extends":["A_continuerose_change_success"],
+    "startdescription":"@#uqcharity|Charity dances well into the morning, for as long as I desire it. Her body turns and bends to my wishes, and afterwards she always asks me if her performance was satisfactory.
+                         #uqodette|Sometimes I find Odette lost in her nostalgia; in those moments, her beauty is immobilising. More often than not, she comes back when she notices my stunned presence. For so long she thought that if she saw others enjoying the dance of life, it would shatter her completely. I won't ever let that happen, I promise her as her heart beats in my embrace. In those moments, her beauty is breathtaking.@"
+  },
+
+  {
+    "id":"A_roseend_expulsion",
+    "extends":["A_roseend_expulsion"],
+    "startdescription":"@#uqnathaniel|Nathaniel
+                         #uqmonica|Monica
+                         #uqedgar|Edgar
+                         #uqmarco|Marco
+                         #uqcharity|Charity
+                         #uqotto|Otto
+                         #uqodette|Odette
+                         #|My lover@ will tolerate my neglect no longer."
+  },
+
+  {
+    "id":"belovedfarewell",
+    "extends":["belovedfarewell"],
+    "Alt":[
+      {"id":"nathanielvictory","chance":100},
+      {"id":"monicavictory","chance":100},
+      {"id":"edgarvictory","chance":100},
+      {"id":"marcovictory","chance":100},
+      {"id":"charityvictory","chance":100},
+      {"id":"ottovictory","chance":100},
+      {"id":"odettevictory","chance":100}
+    ]
+  },
+  {
+    "id":"belovedfarewelldream",
+    "extends":["belovedfarewelldream"],
+    "Alt":[
+      {"id":"nathanielvictory","chance":100},
+      {"id":"monicavictory","chance":100},
+      {"id":"edgarvictory","chance":100},
+      {"id":"marcovictory","chance":100},
+      {"id":"charityvictory","chance":100},
+      {"id":"ottovictory","chance":100},
+      {"id":"odettevictory","chance":100}
+    ]
+  },
+
+
+  {
+    "id":"monicavictory",
+    "label":"Love?",
+    "startdescription":"I heard a story once: of scales where one pan held a heart, and the other a feather. This the choice I now make, though the feather be eternity. [This choice will abort your Ascension, and make the choice to live as a mortal with Monica.]",
+    "actionId":"work",
+    "requirements":{"romanticinterest":1, "passion":1, "uqmonica":1},
+    "warmup":60,
+    "ending":"monicavictory",
+    "signalEndingFlavour":"Grand"
+  },
+  {
+    "id":"nathanielvictory",
+    "label":"Love?",
+    "startdescription":"I heard a story once: of scales where one pan held a heart, and the other a feather. This the choice I now make, though the feather be eternity. [This choice will abort your Ascension, and make the choice to live as a mortal with Nathaniel.]",
+    "actionId":"work",
+    "requirements":{"romanticinterest":1, "passion":1, "uqnathaniel":1},
+    "warmup":60,
+    "ending":"nathanielvictory",
+    "signalEndingFlavour":"Grand"
+  },
+  {
+    "id":"edgarvictory",
+    "label":"Love?",
+    "startdescription":"I heard a story once: of scales where one pan held a heart, and the other a feather. This the choice I now make, though the feather be eternity. [This choice will abort your Ascension, and make the choice to live as a mortal with Edgar.]",
+    "actionId":"work",
+    "requirements":{"romanticinterest":1, "passion":1, "uqedgar":1},
+    "warmup":60,
+    "ending":"edgarvictory",
+    "signalEndingFlavour":"Grand"
+  },
+  {
+    "id":"marcovictory",
+    "label":"Love?",
+    "startdescription":"I heard a story once: of scales where one pan held a heart, and the other a feather. This the choice I now make, though the feather be eternity. [This choice will abort your Ascension, and make the choice to live as a mortal with Marco.]",
+    "actionId":"work",
+    "requirements":{"romanticinterest":1, "passion":1, "uqmarco":1},
+    "warmup":60,
+    "ending":"marcovictory",
+    "signalEndingFlavour":"Grand"
+  },
+  {
+    "id":"charityvictory",
+    "label":"Love?",
+    "startdescription":"I heard a story once: of scales where one pan held a heart, and the other a feather. This the choice I now make, though the feather be eternity. [This choice will abort your Ascension, and make the choice to live as a mortal with Charity.]",
+    "actionId":"work",
+    "requirements":{"romanticinterest":1, "passion":1, "uqcharity":1},
+    "warmup":60,
+    "ending":"charityvictory",
+    "signalEndingFlavour":"Grand"
+  },
+  {
+    "id":"ottovictory",
+    "label":"Love?",
+    "startdescription":"I heard a story once: of scales where one pan held a heart, and the other a feather. This the choice I now make, though the feather be eternity. [This choice will abort your Ascension, and make the choice to live as a mortal with Otto.]",
+    "actionId":"work",
+    "requirements":{"romanticinterest":1, "passion":1, "uqotto":1},
+    "warmup":60,
+    "ending":"ottovictory",
+    "signalEndingFlavour":"Grand"
+  },
+  {
+    "id":"odettevictory",
+    "label":"Love?",
+    "startdescription":"I heard a story once: of scales where one pan held a heart, and the other a feather. This the choice I now make, though the feather be eternity. [This choice will abort your Ascension, and make the choice to live as a mortal with Odette.]",
+    "actionId":"work",
+    "requirements":{"romanticinterest":1, "passion":1, "uqodette":1},
+    "warmup":60,
+    "ending":"odettevictory",
+    "signalEndingFlavour":"Grand"
+  }
+]
+}

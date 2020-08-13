@@ -1,0 +1,13 @@
+{
+
+"elements": [
+  {
+    "id": "gratitude",
+    "icon":"gratitude",
+    "label": "Gratitude",
+    "description": "A favour earned is a favour returned. [Gratitude can be used to get benefits from their respective Patrons.]",
+    "isAspect": true
+  }
+]
+
+}

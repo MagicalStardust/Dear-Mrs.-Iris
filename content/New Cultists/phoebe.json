@@ -1,0 +1,85 @@
+{
+"elements":
+[
+  {
+    "id":"uqphoebe",
+    "isAspect": true,
+    "isHidden": true
+  },
+  {
+    "id":"phoebe_a",
+    "icon":"phoebe",
+    "label":"Phoebe, an acquaintance",
+    "description": "Phoebe lights lamps across London in the evening hours. She says that on clearer nights, the stars looks like lamps themselves, thousands of tiny points lighting up the sky. [You might be able to recruit this acquaintance as a follower.]",
+    "aspects": {"acquaintance":1, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse", "recruiting": "phoebe_b"},
+    "uniquenessgroup": "uqphoebe"
+  },
+  {
+    "id":"phoebe_b",
+    "icon":"phoebe",
+    "label":"Phoebe, a believer",
+    "description": "Phoebe knows how to create light. We've yet to teach her how to make it burn.",
+    "aspects": {"follower":1, "mortal":1, "lantern":2},
+    "xtriggers": {"capturefollower": "phoebe_p", "rebellion": "phoebe_r", "derangemortal": "lunatic", "killmortal": "corpse", "promotiontodisciple": "phoebe_c"},
+    "uniquenessgroup": "uqphoebe"
+  },
+  {
+    "id":"phoebe_c",
+    "icon":"phoebe",
+    "label":"Phoebe, a disciple",
+    "description": "Phoebe is never seen without her wick these days. She's always ready to illuminate the way.",
+    "aspects": {"potential": 1, "disciple": 1, "follower":1, "mortal":1, "lantern":5},
+    "xtriggers": {"capturefollower": "phoebe_p", "rebellion": "phoebe_r_c", "derangemortal": "lunatic", "killmortal": "corpse", "promotionto_d_lantern": "phoebe_d"},
+    "uniquenessgroup": "uqphoebe"
+  },
+  {
+    "id":"phoebe_d",
+    "icon":"phoebe",
+    "label":"Phoebe, a Seer",
+    "description": "Phoebe sees further into the distance than any of us. Her lamp may show us the path, but it shows her far more than that.",
+    "aspects": {"exalted": 1, "disciple": 1, "follower":1, "mortal":1, "lantern":10},
+    "xtriggers": {"capturefollower": "phoebe_p", "rebellion": "phoebe_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqphoebe"
+  },
+  {
+    "id":"phoebe_r",
+    "icon":"phoebe",
+    "label":"Phoebe, a Troublemaker",
+    "description": "The lamps near out neighbourhood are suspiciously faulty as of late.",
+    "aspects": {"rivalmarks": 2, "independent":1, "suspicious": 1, "mortal":1},
+    "xtriggers": {"recruiting": "phoebe_b", "rival_promotion": "phoebe_r_c", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqphoebe"
+  },
+  {
+    "id":"phoebe_r_c",
+    "icon":"phoebe",
+    "label":"Phoebe, a Rival",
+    "description": "Phoebe has seen the path, and its' a lonely one.",
+    "aspects": {"rivalmarks": 3, "independent":1, "suspicious": 1, "mortal":1, "disciple": 1},
+    "xtriggers": {"recruiting": "phoebe_c", "rival_promotion": "phoebe_r_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqphoebe"
+  },
+  {
+    "id":"phoebe_r_d",
+    "icon":"phoebe",
+    "label":"Phoebe, a Long in the Making",
+    "description": "Phoebe knows how to make light, and now she also knows how to make it burn.",
+    "aspects": {"rivalmarks": 4, "independent":1, "suspicious": 1, "mortal":1, "exalted": 1},
+    "xtriggers": {"recruiting": "phoebe_d", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "uniquenessgroup": "uqphoebe"
+  },
+  {
+    "id":"phoebe_p",
+    "icon":"phoebe",
+    "label":"Phoebe, a Prisoner",
+    "description": "Phoebe hides in the darkest corner of her cell. She complains whenever we light a candle.",
+    "aspects": {"prisoner": 1, "lantern": 5, "grail":3, "heart":3, "mortal":1},
+    "xtriggers": {"derangemortal": "lunatic", "killmortal": "corpse"},
+    "lifetime": 600,
+    "decayTo": "corpse",
+    "uniquenessgroup": "uqphoebe"
+  }
+]
+
+}

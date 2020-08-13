@@ -1,0 +1,234 @@
+{
+
+"elements": [
+  {
+    "id": "harrisgratitude",
+    "icon":"harrisa",
+    "label": "Harris' Gratitude [Minor]",
+    "description": "I have earned the favour of the good doctor. [Use this to receive assistance from Dr. Harris.]",
+    "aspects": {"gratitude": 1}
+  },
+  {
+    "id": "harrisgratitudeb",
+    "icon":"harrisb",
+    "label": "Harris' Gratitude [Major]",
+    "description": "I have earned the favour of the good doctor. [Use this to receive assistance from Dr. Harris.]",
+    "aspects": {"gratitude": 2}
+  },
+  {
+    "id": "harrisgratitudec",
+    "icon":"harrisc",
+    "label": "Harris' Gratitude [Substantial]",
+    "description": "I have earned the favour of the good doctor. [Use this to receive assistance from Dr. Harris.]",
+    "aspects": {"gratitude": 3}
+  },
+  {
+    "id": "harrisready",
+    "icon":"harris",
+    "label": "Dr. Harris",
+    "description": "Leopold Harris is the owner of a solicitor's business, and a man of few, if any words. He's interested in the mysteries of eternity, and the ways in which one can bring it crashing down.",
+    "aspects": {"patron":1, "mortal":1},
+    "xtriggers": {"commissiongiven":"harris"},
+    "slots":
+    [
+      {
+        "id": "Gratitude",
+        "actionId": "talk",
+        "required": {"gratitude": 1},
+        "consumes": true
+      }
+    ],
+    "unique": true,
+
+  },
+  {
+    "id": "harris",
+    "icon":"harris",
+    "label": "Dr. Harris",
+    "description": "Leopold Harris is the owner of a solicitor's business, and a man of few, if any words. He has offered you a commission.",
+    "aspects": {"gangleader": 1, "patron":1},
+    "slots":
+    [
+      {
+        "id": "Commission",
+        "actionId": "talk",
+        "required": {"commission": 1}
+      },
+      {
+        "id": "Manuscript",
+        "actionId": "talk",
+        "required": {"article": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled":"harrisaway"},
+    "unique": true
+  },
+  {
+    "id": "harrisaway",
+    "icon":"harris",
+    "label": "Dr. Harris",
+    "description": "Leopold Harris is the owner of a solicitor's business, and a man of few, if any words. He's preparing something he has not disclosed to me, but he will be back soon.",
+    "lifetime": 120,
+    "decayTo": "harrisready",
+    "unique": true
+  },
+  {
+    "id": "commissionarticleedge",
+    "icon": "commissionarticleedge",
+    "label": "Commission: Edge",
+    "description": "Dr. Harris knows solemnity and grief. He needs to know about what leads to them. He has not disclosed why. [You'll need a matching Lore fragment of at least level 2 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "harrisgratitude"}
+  },
+  {
+    "id": "commissionarticleedgeb",
+    "icon": "commissionarticleedgeb",
+    "label": "Commission: Edge (Substantial)",
+    "description": "Dr. Harris needs to sharpen his skills and deepen his knowledge of the art of battle. He has not disclosed why. [You'll need a matching Lore fragment of at least level 4 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "harrisgratitudeb"}
+  },
+  {
+    "id": "commissionarticleedgec",
+    "icon": "commissionarticleedgec",
+    "label": "Commission: Edge (Very Substantial)",
+    "description": "Dr. Harris says he needs a suitable conclusion to his goals. He has not explained what he means by this. [You'll need a matching Lore fragment of at least level 6 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "harrisgratitudec"}
+  },
+  {
+    "id": "commissionarticleeheart",
+    "icon": "commissionarticleheart",
+    "label": "Commission: Edge",
+    "description": "[You'll need a matching Lore fragment of at least level 2 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "harrisgratitude"}
+  },
+  {
+    "id": "commissionarticleeheartb",
+    "icon": "commissionarticleheartb",
+    "label": "Commission: Edge",
+    "description": "[You'll need a matching Lore fragment of at least level 2 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "harrisgratitudeb"}
+  },
+  {
+    "id": "commissionarticleeheartc",
+    "icon": "commissionarticleheartc",
+    "label": "Commission: Edge",
+    "description": "[You'll need a matching Lore fragment of at least level 2 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "work",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "work",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "harrisgratitudec"}
+  },
+
+  {
+    "id": "favourb",
+    "label": "Defamation Lawsuit",
+    "description": "A formal case against the stories the papers run about me. I can use this to partially clean up my... Unsavoury reputation.",
+    "lifetime": 300,
+    "aspects": {"job": 1},
+    "slots":
+    [
+      {
+        "id": "Reputation",
+        "actionId": "work",
+        "required": {"notoriety": 1}
+      }
+    ]
+  },
+  {
+    "id": "favourc",
+    "label": "Right of Access Case",
+    "description": "A formal request to hand over any personal documents about my person. I can use this to get rid of potential evidence of my misdeeds.",
+    "lifetime": 300,
+    "aspects": {"job": 1},
+    "slots":
+    [
+      {
+        "id": "Documents",
+        "actionId": "work",
+        "required": {"evidencelevel": 1}
+      }
+    ]
+  }
+]
+
+}

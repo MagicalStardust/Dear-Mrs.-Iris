@@ -1,0 +1,10 @@
+{
+    "name": "Dear Mrs. Iris",
+    "author": "Rossendale",
+    "version": "0.1.0",
+
+    "description": "An enhancement to the base CultSim game.",
+    "description_long": "A large-scale overhaul of Cultist Simulator, adding new mechanics, recipes, followers and more.",
+
+    "dependencies": []
+}

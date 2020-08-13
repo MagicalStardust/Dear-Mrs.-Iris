@@ -1,0 +1,173 @@
+{
+
+"elements": [
+  {
+    "id": "beekgratitude",
+    "icon":"beeka",
+    "label": "Beek's Gratitude [Minor]",
+    "description": "I have earned the favour of the Queen of Gangs. [Use this to receive a gift from Alexandra Beek.]",
+    "aspects": {"gratitude": 1}
+  },
+  {
+    "id": "beekgratitudeb",
+    "icon":"beekb",
+    "label": "Beek's Gratitude [Major]",
+    "description": "I have earned the favour of the Queen of Gangs. [Use this to receive a gift from Alexandra Beek.]",
+    "aspects": {"gratitude": 2}
+  },
+  {
+    "id": "beekgratitudec",
+    "icon":"beekc",
+    "label": "Beek's Gratitude [Substantial]",
+    "description": "I have earned the favour of the Queen of Gangs. [Use this to receive a gift from Alexandra Beek.]",
+    "aspects": {"gratitude": 3}
+  },
+  {
+    "id": "beekready",
+    "icon":"beek",
+    "label": "Alexandra Beek",
+    "description": "Alexandra Beek is at the head of the city's most notorious gangs, and has recently taken an interest in the invisible arts. She could use your assistance.",
+    "aspects": {"gangleader": 1, "patron":1, "mortal":1},
+    "xtriggers": {"commissiongiven":"beek", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "slots":
+    [
+      {
+        "id": "Gratitude",
+        "actionId": "talk",
+        "required": {"gratitude": 1},
+        "consumes": true
+      }
+    ],
+    "unique": true
+  },
+  {
+    "id": "beek",
+    "icon":"beek",
+    "label": "Alexandra Beek",
+    "description": "Alexandra Beek is at the head of the city's most notorious gangs, and has recently taken an interest in the invisible arts. She has offered you a commission.",
+    "aspects": {"gangleader": 1, "patron":1, "mortal":1},
+    "slots":
+    [
+      {
+        "id": "Commission",
+        "actionId": "talk",
+        "required": {"commission": 1}
+      },
+      {
+        "id": "Manuscript",
+        "actionId": "talk",
+        "required": {"article": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled":"beekaway", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "unique": true,
+
+  },
+  {
+    "id": "beekaway",
+    "icon":"beek",
+    "label": "Alexandra Beek",
+    "description": "Alexandra Beek is at the head of the city's most notorious gangs, and has recently taken an interest in the invisible arts. She's a busy woman, but she'll be back soon.",
+    "lifetime": 120,
+    "decayTo": "beekready",
+    "unique": true
+  },
+  {
+    "id":"gangleader",
+    "label": "Gang Leader",
+    "description": "This patron is at the helm of a large organization. [Fulfilling commissions for Gang Leaders will award you with powerful Hirelings.]",
+    "isAspect": true
+  },
+  {
+    "id": "commissionarticleforge",
+    "icon": "commissionarticleforge",
+    "label": "Commission: Forge",
+    "description": "Alexandra Beek seeks to make sense of the mysteries of her dreams. Recently, she has dreamt of fire. [You'll need a matching Lore fragment of at least level 2 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "study",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "study",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "beekgratitude"}
+  },
+  {
+    "id": "commissionarticleforgeb",
+    "icon": "commissionarticleforgeb",
+    "label": "Commission: Forge (Substantial)",
+    "description": "Alexandra Beek seeks to make sense of the mysteries of her dreams. Recently, she has dreamt of furnaces and anvils. [You'll need a matching Lore fragment of at least level 4 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "study",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "study",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "beekgratitudeb"}
+  },
+  {
+    "id": "commissionarticleforgec",
+    "icon": "commissionarticleforgec",
+    "label": "Commission: Forge (Very Substantial)",
+    "description": "Alexandra Beek seeks to make sense of the mysteries of her dreams. Recently, she has dreamt of forges, burning suns and the desert heat. [You'll need a matching Lore fragment of at least level 6 to complete this commission.]",
+    "aspects": {"commission": 1, "job": 1},
+    "slots":
+    [
+      {
+        "id": "Lore",
+        "actionId": "study",
+        "required": {"lore": 1}
+      },
+      {
+        "id": "Reason",
+        "actionId": "study",
+        "required": {"reason": 1}
+      }
+    ],
+    "xtriggers": {"commissionfulfilled": "beekgratitudec"}
+  },
+  {
+    "id": "elvi",
+    "icon": "elvi",
+    "label": "Elvi Lindegraaf",
+    "description": "'The boss called me over, so here I am. Now, whose head needs bashing in?'",
+    "aspects": {"follower": 1, "mortal": 1, "edge": 8, "forge": 3, "hireling": 1},
+    "xtriggers": {"capturefollower": "generic_p", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "unique": true
+  },
+  {
+    "id": "jacob",
+    "icon": "jacob",
+    "label": "Jacob Lester",
+    "description": "'I'm here on orders of Mrs. Beek. I can get you or your friends anywhere you need to be.'",
+    "aspects": {"follower": 1, "mortal": 1, "knock": 8, "moth": 3, "hireling": 1},
+    "xtriggers": {"capturefollower": "generic_p", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "unique": true
+  },
+  {
+    "id": "june",
+    "icon": "june",
+    "label": "June Briggs",
+    "description": "'Hello there, dear. The Queen of Gangs mentioned you might need assistance with... People matters.'",
+    "aspects": {"follower": 1, "mortal": 1, "heart": 8, "grail": 3, "hireling": 1},
+    "xtriggers": {"capturefollower": "generic_p", "derangemortal": "lunatic", "killmortal": "corpse"},
+    "unique": true
+  }
+]
+
+}
